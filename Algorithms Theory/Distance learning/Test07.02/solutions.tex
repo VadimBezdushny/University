@@ -1,0 +1,170 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage[•]{•}ckage{svg}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,tabularx}
+\usepackage{makecell}
+\usepackage[most]{tcolorbox}
+\usepackage{minted}
+\usepackage[T2A]{fontenc} 
+\usepackage[english,russian,ukrainian]{babel}
+
+
+\definecolor{block-gray}{gray}{0.90} % уровень прозрачности (1 - максимум)
+\newtcolorbox{test-answer}{colback=block-gray,grow to right by=-10mm,grow to left by=-10mm,
+boxrule=1pt,boxsep=0pt,breakable} % настройки области с изменённым фоном
+\newtcolorbox{test-answer-long}{colback=block-gray,
+boxrule=1pt,boxsep=0pt,breakable} % настройки области с изменённым фоном
+
+
+
+\title{Розв’язки задач самостійної роботи}
+\author{Бездушний Вадим \textbf{K-24}}
+\date{}
+
+
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+\item{МНР-обчислюваність функцій $f : N^{n}\rightarrow N.$ \par
+\begin{test-answer}
+$f : N^{n}\rightarrow N.$ \textit{МНР-обчислювана}, якщо існує МНР-програма, яка
+обчислює $f$.
+\end{test-answer}
+}
+\item{Нормальні алгоритми Маркова. Як НА задає вербальне відображення?\par
+\begin{test-answer}
+Нормальний алгоритм Маркова з алфавітом T - упорядкована послідовність правил вигляду\par
+$\alpha \rightarrow \beta $ та 
+$\alpha \rightarrow \cdot \beta $, де 
+$\alpha, \beta \in T^{*}$ та $\cdot \notin T^{*}$\par
+Правила $\alpha \rightarrow \cdot \beta $ - фінальні.\par
+Кожен нормальний алгоритм в алфавіті $T$ задає деяке вербальне відображення - $T^{*}\rightarrow T^{*}$
+\end{test-answer}
+}
+\item{Різновиди систем Поста. Нормальні системи Поста. Системи Туе.
+\begin{test-answer}
+Існують нормальні і антинормальні системи Поста
+Правило вигляду $gS\rightarrow Sh$ – правило у нормальній формі.
+СП, усі правила якої – у нормальній формі, – нормальна СП\par
+\textit{Система Туе} – це СП, усі правила якої мають вигляд $S1\alpha S2 \rightarrow S1 \beta 
+S2$, причому $\forall \:S1\alpha S2 \rightarrow S1 \beta S2$ існує симетричне йому $S1\beta S2 \rightarrow S1 \alpha S2$.
+\end{test-answer}
+\newpage
+}
+\item{МНР-програма для функції  $f(x, y, z) = x - (y - z).$
+\begin{test-answer-long}
+
+$R_0:$ змінна $x$\par
+$R_1:$ змінна $y$\par
+$R_2:$ змінна $z$\par
+$R_3:$ змінна, що прямуватиме до $y-z$\par
+Після виконання 6-ої команди $R_2$ прямуватиме до $x - res$
+\begin{enumerate}[1.]
+\item{$J(1,2,5)$}
+\item{$S(2)$}
+\item{$S(3)$}
+\item{$J(0,0,1)$}
+\item{$T(3,1)$}
+\item{$Z(2)$}
+
+\item{$J(0,1,12)$}
+\item{$S(1)$}
+\item{$S(2)$}
+\item{$J(0,0,1)$}
+\item{$T(2,0)$}
+
+
+\end{enumerate}
+\end{test-answer-long}
+\newpage
+}
+ 
+
+\item{МНР-програма для функції  $f(x, y) = max(2x, 2+y).$\par
+\begin{test-answer-long}
+
+$R_0:$ змінна $x$\par
+$R_1:$ змінна $y+2$\par
+$R_2:$ змінна, що прямуватиме до $x$\par
+$R_3:$ змінна, що прямуватиме до $2x$
+\begin{enumerate}[1.]
+\item{$S(1)$}
+\item{$S(1)$ Одразу збільшимо $y$ на 2}
+\item{$J(0,2,10)$ Кінець роботи алгоритму 2x < y+2, виходимо} 
+\item{$J(1,3,9)$ виходимо, якщо маємо вміст $R_3$ рівний $R_1$}
+\item{$S(3)$ двічі збільшуємо для 2x}
+\item{$J(1,3,9)$}
+\item{$S(3)$ двічі збільшуємо для 2x}
+\item{$S(2)$}
+\item{$J(0,0,3)$}
+\item{$T(3,1)$}
+\end{enumerate}
+% Відповідь знаходиться в $R_1$
+\end{test-answer-long}
+\newpage
+}
+\item{Машина Тьюрінга для предиката $x\neq4".$  
+\begin{test-answer-long}
+Робимо машину Тьюрінга з 5 станами. Переходимо від першого до другого,від другого до третього і так далі. Якщо опинились рівно на 4-ому стані - предикат не виконується( повертаємо $\lambda$).
+
+\begin{enumerate}[]
+\item{$q_0| \rightarrow q_1|R$}
+\item{$q_1| \rightarrow q_2|R$}
+\item{$q_2| \rightarrow q_3|R$}
+\item{$q_3| \rightarrow q_4|R$}
+\item{$q_4\lambda \rightarrow q^{*}\lambda$
+
+\item{$q_0\lambda \rightarrow q^{*}|$}
+\item{$q_1\lambda \rightarrow q^{*}|$}
+\item{$q_2\lambda \rightarrow q^{*}|$}
+\item{$q_3\lambda \rightarrow q^{*}|$}
+\item{$q_4| \rightarrow q^{*}|$}
+
+}
+
+
+\end{enumerate}
+
+\end{test-answer-long}
+\newpage
+}
+\item{Нормальний алгоритм для функції $f(x, y, z) = (x + y+2) - z.$ }
+\begin{test-answer-long}
+\begin{enumerate}[]
+\item{Спочатку додамо $x$ та $y$: замінимо символ \# між ними та допишемо | на початок}
+\item{$q_0| \rightarrow q_1|L$}
+\item{$q_1\lambda \rightarrow q_2|R$}
+\item{$q_2| \rightarrow q_2|R$}
+\item{$q_2\# \rightarrow q_3|L$}
+\item{$q_3| \rightarrow q_3|L$}
+\item{$q_3\lambda \rightarrow q_4\lambda R$}
+\item{Тепер потрібно відняти два числа:}
+
+\item{$q_4|\rightarrow q_5\lambda R$}
+\item{$q_5|\rightarrow q_5| R$}
+\item{$q_5\#\rightarrow q_5\# R$}
+\item{$q_5\lambda \rightarrow q_6\lambda L$}
+\item{$q_6|\rightarrow q_7\lambda L$}
+\item{$q_7\#\rightarrow q_7\# L$}
+\item{$q_7\lambda \rightarrow q_4\lambda R$}
+\item{$q_6\#\rightarrow q^{*}|$}
+\item{$q_4\#\rightarrow q_8\lambda R$}
+\item{$q_8\lambda \rightarrow q^{*}\lambda$}
+
+\end{enumerate}
+
+\end{test-answer-long}
+\end{enumerate}
+\end{document}

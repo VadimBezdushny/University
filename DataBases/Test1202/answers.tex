@@ -1,0 +1,75 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,tabularx}
+\usepackage{makecell}
+\usepackage[most]{tcolorbox}
+\usepackage{minted}
+\usepackage[T2A]{fontenc}      
+\usepackage[unicode]{hyperref}
+\usepackage[english,russian,ukrainian]{babel}
+
+
+
+\definecolor{block-gray}{gray}{0.90} % уровень прозрачности (1 - максимум)
+\newtcolorbox{test-answer}{colback=block-gray,grow to right by=-10mm,grow to left by=-10mm,
+boxrule=1pt,boxsep=0pt,breakable} % настройки области с изменённым фоном
+\newtcolorbox{test-answer-long}{colback=block-gray,
+boxrule=1pt,boxsep=0pt,breakable} % настройки области с изменённым фоном
+
+
+
+\title{4 запити до БД(12.02)}
+\author{Бездушний Вадим \textbf{K-24}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+\item{Знайти прізвища та організації лекторів, які читають с\textbackslash к (тип) на 3-ому курсі.
+\begin{test-answer}
+	(П[тип = c\textbackslash к])[Кп] $\rightarrow$ R1\\
+	(Г[курс = 3])[Кг] $\rightarrow$ R2\\
+	((Р[Кп = Кп]R1)[Кл, Кг])[Кг = Кг]R2)[Кл] $\rightarrow$ R4\\
+	(R4[Кл = Кл]Л)[прізв, орг] $\rightarrow$ Res
+\end{test-answer}
+}
+\item{Знайти назви предметів, які Іванчук читає не в аудиторії 205.
+\begin{test-answer}
+	(Л[прізв = "Іванчук"])[Кл] $\rightarrow$ R1\\
+	((Р[Кл = Кл]R1)[ауд $\neq$ 205])[Кп] $\rightarrow$ R2\\
+	(П[Кп = Кп]R2)[назва] $\rightarrow$ Res
+\end{test-answer}
+}
+
+\item{Знайти назви предметів, які Іванчук не читає в аудиторії 205.
+\begin{test-answer}
+	(Л[прізв = "Іванчук"])[Кл] $\rightarrow$ R1\\
+	(Р[Кл = Кл]R1)[Кп] $\rightarrow$ R2\\
+	((Р[Кл = Кл]R1)[ауд = 205])[Кп] $\rightarrow$ R3\\
+	(П[Кп = Кп](R2[Кп]\textbackslash R3[Кп]))[назва] $\rightarrow$ Res
+\end{test-answer}
+}
+
+\item{Знайти прізвища лекторів з наук. ступенем доктора, які проводять всі заняття принаймні у ті дні, що і Іванчук. .
+\begin{test-answer}
+	(Л[прізв = "Іванчук"])[Кл] $\rightarrow$ R1\\
+	(Р[Кл = Кл]R1)[день-тижня] $\rightarrow$ R2 //дільник\\
+	(Л[Кл = Кл]Р)[Кл, день-тижня]$\rightarrow$ R3 // ділене\\
+	((((R3 $\div$ R2)[Кл])[Кл = Кл]Л) $\rightarrow$ R4 \\
+	(R4[наук-ступ = "доктор"])[прізв] $\rightarrow$ Res
+\end{test-answer}
+}
+
+\end{enumerate}
+
+\end{document}

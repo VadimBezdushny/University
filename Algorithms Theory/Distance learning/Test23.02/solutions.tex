@@ -1,0 +1,71 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{svg}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,tabularx}
+\usepackage{makecell}
+\usepackage[most]{tcolorbox}
+\usepackage{minted}
+\usepackage[T2A]{fontenc} 
+\usepackage[english,russian,ukrainian]{babel}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\definecolor{block-gray}{gray}{0.90} % уровень прозрачности (1 - максимум)
+\newtcolorbox{test-answer}{colback=block-gray,grow to right by=-10mm,grow to left by=-10mm,
+boxrule=1pt,boxsep=0pt,breakable} % настройки области с изменённым фоном
+\newtcolorbox{test-answer-long}{colback=block-gray,
+boxrule=1pt,boxsep=0pt,breakable} % настройки области с изменённым фоном
+
+
+
+\title{Розв’язки задач самостійної роботи}
+\author{Бездушний Вадим \textbf{K-24}}
+\date{23.02}
+
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+\item{Операція мінімізації $n$-арних функцій на $N$. \par
+\begin{test-answer}
+$f : N^{n}\rightarrow N.$ \textit{МНР-обчислювана}, якщо існує МНР-програма, яка
+обчислює $f$.
+\end{test-answer}
+}
+\item{Алгебрa $n$-арних ПРФ. Операторні терми цієї алгебри.\par
+\begin{test-answer}
+Нормальний алгоритм Маркова з алфавітом T - упорядкована послідовність правил вигляду\par
+$\alpha \rightarrow \beta $ та 
+$\alpha \rightarrow \cdot \beta $, де 
+$\alpha, \beta \in T^{*}$ та $\cdot \notin T^{*}$\par
+Правила $\alpha \rightarrow \cdot \beta $ - фінальні.\par
+Кожен нормальний алгоритм в алфавіті $T$ задає деяке вербальне відображення - $T^{*}\rightarrow T^{*}$
+\end{test-answer}
+}
+\item{Базові програмовані квазіарні функції на R. ППА програмованих квазіарних функцій на R.
+\begin{test-answer}
+Існують нормальні і антинормальні системи Поста
+Правило вигляду $gS\rightarrow Sh$ – правило у нормальній формі.
+СП, усі правила якої – у нормальній формі, – нормальна СП\par
+\textit{Система Туе} – це СП, усі правила якої мають вигляд $S1\alpha S2 \rightarrow S1 \beta 
+S2$, причому $\forall \:S1\alpha S2 \rightarrow S1 \beta S2$ існує симетричне йому $S1\beta S2 \rightarrow S1 \alpha S2$.
+\end{test-answer}
+\newpage
+}
+\item{Дані в мові SIPL, операції на даних.}
+\item{Система Поста для функції $f(x, y) = 2x+3y$}
+\item{Вкажіть ОТ алгебри КЧРФ для функції $f(x) = \ceil{\log{3}{x}}+2$.}
+\item{З‘ясуйте, чи може бути тотальною функція $S^{n+1}(g, g_1 , \dots , g^n )$, якщо $g$ нетотальна.}
+\item{Вкажіть ОТ ППА-$ЕQ-N$ для функції $f(x, y, z) = [x/(y+2)]$.}
+\end{enumerate}`
+\end{document}

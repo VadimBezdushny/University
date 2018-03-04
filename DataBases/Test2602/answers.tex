@@ -1,0 +1,82 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc} 
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs,tabularx}
+\usepackage{makecell}
+\usepackage[most]{tcolorbox}
+\usepackage{minted}
+\usepackage[T2A]{fontenc}      
+\usepackage[unicode]{hyperref}
+\usepackage[english,russian,ukrainian]{babel}
+
+
+
+\definecolor{block-gray}{gray}{0.90} % уровень прозрачности (1 - максимум)
+\newtcolorbox{test-answer}{colback=block-gray,grow to right by=20mm,grow to left by=20mm,
+boxrule=1pt,boxsep=0pt,breakable} % настройки области с изменённым фоном
+\newtcolorbox{test-answer-long}{colback=block-gray,
+boxrule=1pt,boxsep=0pt,breakable} % настройки области с изменённым фоном
+
+
+
+\title{4 запити до БД(26.02)}
+\author{Бездушний Вадим \textbf{K-24}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+\item{Знайти прізвища та організації лекторів, які читають с\textbackslash к (тип) на 3-ому курсі.
+\begin{test-answer}
+	RANGE P S(Schedule)\\
+	RANGE П C(Course)\\
+	RANGE Г G(Group)\\
+	Get W(S.Кл): $\exists S \exists C \exists G$(S.Кг = G.Кг \& S.Кп = C.Кп \& С.тип = "с\textbackslash к" \& G.курс = 3)\\
+	RANGE W Y\\
+	Get A(Л.прізв, Л.орг): $\exists$Y(Y.Кл = Л.Кл)\\
+\end{test-answer}
+}
+\item{Знайти назви предметів, які Іванчук читає не в аудиторії 205.
+\begin{test-answer}
+	RANGE P S(Schedule)\\
+	RANGE П C(Course)\\
+	RANGE Л L(Lector)\\
+	Get W(C.назва):$\exists S \exists C \exists L$( S.Кп = С.Кп \& S.Кл = L.Кл \& L.прізв = "Іванчук" \& S.ауд $\neq$ 205)\\
+\end{test-answer}
+}
+
+\item{Знайти назви предметів, які Іванчук не читає в аудиторії 205.
+\begin{test-answer}
+	RANGE P S(Schedule)\\
+	RANGE П C(Course)\\
+	RANGE Л L(Lector)\\
+	Get Y(C.Кп): $\nexists S \exists C \exists L$
+	( S.Кп = С.Кп \& S.Кл = L.Кл \& L.прізв = "Іванчук" \& S.ауд = 205)\\	
+\end{test-answer}
+}
+
+\item{Знайти прізвища лекторів з наук. ступенем доктора, які проводять всі заняття принаймні у ті дні, що і Іванчук. .
+\begin{test-answer}
+	RANGE P S(Schedule)\\
+	RANGE П C(Course)\\
+	RANGE Л L(Lector)\\
+	Get Y(S.день): $\exists S \exists L$ ( S.Кп = С.Кп \& S.Кл = L.Кл \& L.прізв = "Іванчук")\\	
+	RANGE Y D\\
+	Get W(L.прізв): $\exists S \forall D$ (S.день = D.день \& S.Кл = L.Кл \& L.наук-ступ = "доктор")
+\end{test-answer}
+
+}
+
+\end{enumerate}
+
+\end{document}
