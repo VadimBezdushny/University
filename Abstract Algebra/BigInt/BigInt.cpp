@@ -44,14 +44,20 @@ BigInt BigInt::addData(const BigInt &lhs, const BigInt &rhs) {
     BigInt result;
 
     result.data.reserve(std::max(lhs.data.size(), rhs.data.size()));
-    auto lhs_head = lhs.data.begin(), rhs_head = rhs.data.begin();
+    auto lhs_iter = lhs.data.begin(), rhs_iter = rhs.data.begin();
 
     uint carry = 0;
-    while (carry > 0 && lhs_head != lhs.data.end() && rhs_head != rhs.data.end()) {
-        uint digit_sum = *lhs_head + *rhs_head + carry;
+    while (carry > 0 || lhs_iter != lhs.data.end() || rhs_iter != rhs.data.end()) {
+        uint digit_sum = (lhs_iter != lhs.data.end() ? *lhs_iter : 0) +
+                         (rhs_iter != rhs.data.end() ? *rhs_iter : 0) +
+                         carry;
 
-        result.data.push_back(digit_sum % BigInt::internal_base);
-        carry = digit_sum / BigInt::internal_base;
+        result.data.push_back(digit_sum % BigInt::base);
+        carry = digit_sum / BigInt::base;
+
+
+        if (lhs_iter != lhs.data.end())lhs_iter++;
+        if (rhs_iter != rhs.data.end())rhs_iter++;
     }
     return result;
 }
@@ -69,7 +75,7 @@ BigInt BigInt::substractData(const BigInt &lhs, const BigInt &rhs) {
         auto rhs_digit = (rhs_iter != rhs.data.end() ? *rhs_iter : 0);
 
         uint next_need = static_cast<uint>(*lhs_iter < rhs_digit + need);
-        uint next_digit = BigInt::internal_base * next_need + *lhs_iter - rhs_digit - need;
+        uint next_digit = BigInt::base * next_need + *lhs_iter - rhs_digit - need;
         result.data.push_back(next_digit);
 
         need = next_need;

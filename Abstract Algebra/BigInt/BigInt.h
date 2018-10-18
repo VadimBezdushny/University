@@ -13,7 +13,7 @@
 typedef unsigned uint;
 
 class BigInt {
-    static const uint internal_base = 10;
+    static const uint base = 10;
     int sign;
     std::vector<uint> data;
 
