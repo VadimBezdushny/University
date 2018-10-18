@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/labs.dir/main.cpp.o CMakeFiles/labs.dir/BigInt.cpp.o  -o labs 
