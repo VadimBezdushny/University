@@ -25,8 +25,9 @@ class BigInt {
     int compare(const BigInt &lhs, const BigInt &rhs);
     BigInt addData(const BigInt &lhs, const BigInt &rhs);
     BigInt substractData(const BigInt &lhs, const BigInt &rhs);
-
+    BigInt multiplyData(const BigInt &lhs, const BigInt &rhs);
     friend BigInt operator+(const BigInt &lhs, const BigInt &rhs);
+
 
 };
 

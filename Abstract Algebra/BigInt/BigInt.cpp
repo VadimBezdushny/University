@@ -5,10 +5,6 @@
 #include <cassert>
 #include "BigInt.h"
 
-BigInt operator+(const BigInt &lhs, const BigInt &rhs) {
-
-}
-
 BigInt::BigInt(std::string s) {
     if (s.empty()) {
         throw; // TODO
@@ -67,7 +63,6 @@ BigInt BigInt::substractData(const BigInt &lhs, const BigInt &rhs) {
      * Substract two numbers ignoring sign, lhs >= rhs
      *
      */
-    // TODO: add sign
     BigInt result;
     auto lhs_iter = lhs.data.begin(), rhs_iter = rhs.data.begin();
     uint need = 0;
@@ -117,3 +112,20 @@ int BigInt::compare(const BigInt &lhs, const BigInt &rhs) {
     return 0;
 }
 
+BigInt operator+(const BigInt &lhs, const BigInt &rhs) {
+    return BigInt();
+}
+
+BigInt BigInt::multiplyData(const BigInt &lhs, const BigInt &rhs) {
+    BigInt result;
+    result.data.resize(lhs.data.size() + rhs.data.size());
+    for (std::size_t i = 0; i < lhs.data.size(); i++) {
+        uint carry = 0;
+        for (std::size_t j = 0; carry || j < rhs.data.size(); j++) {
+            uint cur = result.data[i + j] + carry + lhs.data[i] * (j < rhs.data.size() ? rhs.data[j] : 0);
+            result.data[i + j] = cur % BigInt::base;
+            carry = cur / BigInt::base;
+        }
+    }
+    return result;
+}

@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/heimdall/Dev/University/Abstract Algebra/BigInt/BigInt.cpp
+cassert
+-
 BigInt.h
 /home/heimdall/Dev/University/Abstract Algebra/BigInt/BigInt.h
 
@@ -16,9 +18,5 @@ vector
 string
 -
 algorithm
--
-
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/main.cpp
-iostream
 -
 
