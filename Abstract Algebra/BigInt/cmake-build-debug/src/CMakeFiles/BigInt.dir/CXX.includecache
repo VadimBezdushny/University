@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt.cpp
+cassert
+-
+BigInt.h
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt.h
+
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt.h
+vector
+-
+string
+-
+algorithm
+-
+

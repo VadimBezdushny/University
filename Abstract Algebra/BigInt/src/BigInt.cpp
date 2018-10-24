@@ -129,3 +129,8 @@ BigInt BigInt::multiplyData(const BigInt &lhs, const BigInt &rhs) {
     }
     return result;
 }
+
+void BigInt::removeZeros() {
+    while(data.size() > 1 && data.back() == 0)
+        data.pop_back();
+}

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcalendars.a  CMakeFiles/calendars.dir/BigInt.cpp.o
+/usr/bin/ranlib libcalendars.a

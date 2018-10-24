@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/BigInt.dir/main.cpp.o"
   "CMakeFiles/BigInt.dir/BigInt.cpp.o"
+  "CMakeFiles/BigInt.dir/Tests/BigIntTests.cpp.o"
   "BigInt.pdb"
   "BigInt"
 )

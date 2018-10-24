@@ -65,39 +65,362 @@ CMAKE_SOURCE_DIR = "/home/heimdall/Dev/University/Abstract Algebra/BigInt"
 CMAKE_BINARY_DIR = "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug"
 
 #=============================================================================
-# Target rules for target CMakeFiles/BigInt.dir
+# Target rules for target CMakeFiles/BigInt_project_run.dir
 
 # All Build rule for target.
-CMakeFiles/BigInt.dir/all:
-	$(MAKE) -f CMakeFiles/BigInt.dir/build.make CMakeFiles/BigInt.dir/depend
-	$(MAKE) -f CMakeFiles/BigInt.dir/build.make CMakeFiles/BigInt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" --progress-num=1,2,3 "Built target BigInt"
-.PHONY : CMakeFiles/BigInt.dir/all
+CMakeFiles/BigInt_project_run.dir/all: src/CMakeFiles/BigInt.dir/all
+	$(MAKE) -f CMakeFiles/BigInt_project_run.dir/build.make CMakeFiles/BigInt_project_run.dir/depend
+	$(MAKE) -f CMakeFiles/BigInt_project_run.dir/build.make CMakeFiles/BigInt_project_run.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target BigInt_project_run"
+.PHONY : CMakeFiles/BigInt_project_run.dir/all
 
 # Include target in all.
-all: CMakeFiles/BigInt.dir/all
+all: CMakeFiles/BigInt_project_run.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/BigInt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BigInt.dir/all
+CMakeFiles/BigInt_project_run.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BigInt_project_run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/BigInt.dir/rule
+.PHONY : CMakeFiles/BigInt_project_run.dir/rule
 
 # Convenience name for target.
-BigInt: CMakeFiles/BigInt.dir/rule
+BigInt_project_run: CMakeFiles/BigInt_project_run.dir/rule
+
+.PHONY : BigInt_project_run
+
+# clean rule for target.
+CMakeFiles/BigInt_project_run.dir/clean:
+	$(MAKE) -f CMakeFiles/BigInt_project_run.dir/build.make CMakeFiles/BigInt_project_run.dir/clean
+.PHONY : CMakeFiles/BigInt_project_run.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/BigInt_project_run.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src
+
+# Convenience name for "all" pass in the directory.
+src/all: src/CMakeFiles/BigInt.dir/all
+
+.PHONY : src/all
+
+# Convenience name for "clean" pass in the directory.
+src/clean: src/CMakeFiles/BigInt.dir/clean
+
+.PHONY : src/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/preinstall:
+
+.PHONY : src/preinstall
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/BigInt.dir
+
+# All Build rule for target.
+src/CMakeFiles/BigInt.dir/all:
+	$(MAKE) -f src/CMakeFiles/BigInt.dir/build.make src/CMakeFiles/BigInt.dir/depend
+	$(MAKE) -f src/CMakeFiles/BigInt.dir/build.make src/CMakeFiles/BigInt.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target BigInt"
+.PHONY : src/CMakeFiles/BigInt.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/BigInt.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/BigInt.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/BigInt.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 0
+.PHONY : src/CMakeFiles/BigInt.dir/rule
+
+# Convenience name for target.
+BigInt: src/CMakeFiles/BigInt.dir/rule
 
 .PHONY : BigInt
 
 # clean rule for target.
-CMakeFiles/BigInt.dir/clean:
-	$(MAKE) -f CMakeFiles/BigInt.dir/build.make CMakeFiles/BigInt.dir/clean
-.PHONY : CMakeFiles/BigInt.dir/clean
+src/CMakeFiles/BigInt.dir/clean:
+	$(MAKE) -f src/CMakeFiles/BigInt.dir/build.make src/CMakeFiles/BigInt.dir/clean
+.PHONY : src/CMakeFiles/BigInt.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/BigInt.dir/clean
+clean: src/CMakeFiles/BigInt.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Tests
+
+# Convenience name for "all" pass in the directory.
+Tests/all: Tests/CMakeFiles/runBigIntTests.dir/all
+Tests/all: Tests/lib/googletest/all
+
+.PHONY : Tests/all
+
+# Convenience name for "clean" pass in the directory.
+Tests/clean: Tests/CMakeFiles/runBigIntTests.dir/clean
+Tests/clean: Tests/lib/googletest/clean
+
+.PHONY : Tests/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Tests/preinstall: Tests/lib/googletest/preinstall
+
+.PHONY : Tests/preinstall
+
+#=============================================================================
+# Target rules for target Tests/CMakeFiles/runBigIntTests.dir
+
+# All Build rule for target.
+Tests/CMakeFiles/runBigIntTests.dir/all: src/CMakeFiles/BigInt.dir/all
+Tests/CMakeFiles/runBigIntTests.dir/all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+Tests/CMakeFiles/runBigIntTests.dir/all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f Tests/CMakeFiles/runBigIntTests.dir/build.make Tests/CMakeFiles/runBigIntTests.dir/depend
+	$(MAKE) -f Tests/CMakeFiles/runBigIntTests.dir/build.make Tests/CMakeFiles/runBigIntTests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" --progress-num=13,14 "Built target runBigIntTests"
+.PHONY : Tests/CMakeFiles/runBigIntTests.dir/all
+
+# Include target in all.
+all: Tests/CMakeFiles/runBigIntTests.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Tests/CMakeFiles/runBigIntTests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 8
+	$(MAKE) -f CMakeFiles/Makefile2 Tests/CMakeFiles/runBigIntTests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 0
+.PHONY : Tests/CMakeFiles/runBigIntTests.dir/rule
+
+# Convenience name for target.
+runBigIntTests: Tests/CMakeFiles/runBigIntTests.dir/rule
+
+.PHONY : runBigIntTests
+
+# clean rule for target.
+Tests/CMakeFiles/runBigIntTests.dir/clean:
+	$(MAKE) -f Tests/CMakeFiles/runBigIntTests.dir/build.make Tests/CMakeFiles/runBigIntTests.dir/clean
+.PHONY : Tests/CMakeFiles/runBigIntTests.dir/clean
+
+# clean rule for target.
+clean: Tests/CMakeFiles/runBigIntTests.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Tests/lib/googletest
+
+# Convenience name for "all" pass in the directory.
+Tests/lib/googletest/all: Tests/lib/googletest/googlemock/all
+
+.PHONY : Tests/lib/googletest/all
+
+# Convenience name for "clean" pass in the directory.
+Tests/lib/googletest/clean: Tests/lib/googletest/googlemock/clean
+
+.PHONY : Tests/lib/googletest/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Tests/lib/googletest/preinstall: Tests/lib/googletest/googlemock/preinstall
+
+.PHONY : Tests/lib/googletest/preinstall
+
+#=============================================================================
+# Directory level rules for directory Tests/lib/googletest/googlemock
+
+# Convenience name for "all" pass in the directory.
+Tests/lib/googletest/googlemock/all: Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+Tests/lib/googletest/googlemock/all: Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+Tests/lib/googletest/googlemock/all: Tests/lib/googletest/googlemock/gtest/all
+
+.PHONY : Tests/lib/googletest/googlemock/all
+
+# Convenience name for "clean" pass in the directory.
+Tests/lib/googletest/googlemock/clean: Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+Tests/lib/googletest/googlemock/clean: Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
+Tests/lib/googletest/googlemock/clean: Tests/lib/googletest/googlemock/gtest/clean
+
+.PHONY : Tests/lib/googletest/googlemock/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Tests/lib/googletest/googlemock/preinstall: Tests/lib/googletest/googlemock/gtest/preinstall
+
+.PHONY : Tests/lib/googletest/googlemock/preinstall
+
+#=============================================================================
+# Target rules for target Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir
+
+# All Build rule for target.
+Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all: Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) -f Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" --progress-num=7,8 "Built target gmock_main"
+.PHONY : Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+
+# Include target in all.
+all: Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 6
+	$(MAKE) -f CMakeFiles/Makefile2 Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 0
+.PHONY : Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+
+# Convenience name for target.
+gmock_main: Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+
+.PHONY : gmock_main
+
+# clean rule for target.
+Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) -f Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+
+# clean rule for target.
+clean: Tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir
+
+# All Build rule for target.
+Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) -f Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" --progress-num=5,6 "Built target gmock"
+.PHONY : Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+
+# Include target in all.
+all: Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 0
+.PHONY : Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/rule
+
+# Convenience name for target.
+gmock: Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/rule
+
+.PHONY : gmock
+
+# clean rule for target.
+Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) -f Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
+
+# clean rule for target.
+clean: Tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Tests/lib/googletest/googlemock/gtest
+
+# Convenience name for "all" pass in the directory.
+Tests/lib/googletest/googlemock/gtest/all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+Tests/lib/googletest/googlemock/gtest/all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+
+.PHONY : Tests/lib/googletest/googlemock/gtest/all
+
+# Convenience name for "clean" pass in the directory.
+Tests/lib/googletest/googlemock/gtest/clean: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
+Tests/lib/googletest/googlemock/gtest/clean: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/clean
+
+.PHONY : Tests/lib/googletest/googlemock/gtest/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Tests/lib/googletest/googlemock/gtest/preinstall:
+
+.PHONY : Tests/lib/googletest/googlemock/gtest/preinstall
+
+#=============================================================================
+# Target rules for target Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir
+
+# All Build rule for target.
+Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) -f Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" --progress-num=11,12 "Built target gtest_main"
+.PHONY : Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+
+# Include target in all.
+all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 0
+.PHONY : Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
+
+# Convenience name for target.
+gtest_main: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
+
+.PHONY : gtest_main
+
+# clean rule for target.
+Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) -f Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
+.PHONY : Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
+
+# clean rule for target.
+clean: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir
+
+# All Build rule for target.
+Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all:
+	$(MAKE) -f Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/depend
+	$(MAKE) -f Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" --progress-num=9,10 "Built target gtest"
+.PHONY : Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+
+# Include target in all.
+all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles" 0
+.PHONY : Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule
+
+# Convenience name for target.
+gtest: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/rule
+
+.PHONY : gtest
+
+# clean rule for target.
+Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) -f Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/build.make Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/clean
+.PHONY : Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/clean
+
+# clean rule for target.
+clean: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 
 .PHONY : clean
 

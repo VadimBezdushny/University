@@ -1,0 +1,35 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3ea8c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ea8c.dir/build.make CMakeFiles/cmTC_3ea8c.dir/build
+make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3ea8c.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_3ea8c.dir/CheckSymbolExists.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
+Linking C executable cmTC_3ea8c
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4505.18/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ea8c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3ea8c.dir/CheckSymbolExists.c.o  -o cmTC_3ea8c 
+CMakeFiles/cmTC_3ea8c.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3ea8c.dir/build.make:86: recipe for target 'cmTC_3ea8c' failed
+make[1]: *** [cmTC_3ea8c] Error 1
+make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_3ea8c/fast' failed
+make: *** [cmTC_3ea8c/fast] Error 2
+
+File /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
