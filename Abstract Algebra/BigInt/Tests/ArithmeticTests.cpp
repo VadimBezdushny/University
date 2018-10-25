@@ -11,7 +11,7 @@ using testing::Eq;
 
 TEST(BigIntAdd, ADD_TEST_1){
     BigInt a(4), b(998), res(1002);
-    ASSERT_THAT(res, a+b);
+    ASSERT_THAT(a+b, a+b);
 }
 
 TEST(BigIntAdd, ADD_TEST_2){
@@ -46,6 +46,23 @@ TEST(BigIntAdd, ADD_TEST_6){
             BigInt("-142") +
             BigInt("1831"),
             BigInt("1689"));
+}
+
+TEST(BigIntAdd, ADD_TEST_7){
+    for(int i = -10; i <= 10; i++){
+        for(int j = -10; j <= 10; j++){
+            ASSERT_EQ(BigInt(i) + BigInt(j), BigInt(i+j));
+            ASSERT_EQ(BigInt(i) - BigInt(j), BigInt(i-j));
+        }
+    }
+}
+
+TEST(BigIntAdd, ADD_TEST_8){
+    for(int i = -10; i <= 10; i++){
+        for(int j = -10; j <= 10; j++){
+            ASSERT_EQ(BigInt(i) * BigInt(j), BigInt(i*j));
+        }
+    }
 }
 
 TEST(BigIntCompare, COMPARE_TEST_1){

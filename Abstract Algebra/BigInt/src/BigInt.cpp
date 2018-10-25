@@ -27,7 +27,7 @@ BigInt::BigInt(const std::string &s) {
     }
     std::reverse(data.begin(), data.end());
     removeZeros();
-    if (data.size() == 1 || data.front() == 0)
+    if (data.size() == 1 && data.front() == 0)
         sign = 1;
 }
 
@@ -79,6 +79,7 @@ BigInt substractData(const BigInt &lhs, const BigInt &rhs) {
             rhs_iter++;
         }
     }
+    result.removeZeros();
     return result;
 }
 
@@ -114,29 +115,25 @@ int compareData(const BigInt &lhs, const BigInt &rhs) {
 }
 
 
-BigInt addOrSub(const BigInt &lhs, const BigInt &rhs, bool subs) {
+BigInt addOrSub(const BigInt &lhs, const BigInt &rhs, bool substract) {
+    // if flag substract is true we subtract data
 
-}
-BigInt operator+(const BigInt &lhs, const BigInt &rhs) {
-    if (lhs.sign == rhs.sign)
+    if ((lhs.sign == rhs.sign) ^ substract)
         return addData(lhs, rhs).setSign(lhs.sign);
 
-    if(compareData(lhs, rhs) >= 0){
-        return substractData(lhs,rhs).setSign(lhs.sign);
-    }else{
-        return substractData(rhs, lhs).setSign(rhs.sign);
-    }
+    // Why it works ?
+    int cmp_value = compareData(lhs, rhs);
+    int new_sign = (substract ? rhs.sign : -rhs.sign);
+    BigInt result = (cmp_value == 1 ? substractData(lhs, rhs): substractData(rhs, lhs));
+    return result.setSign(cmp_value * new_sign);
+}
+
+BigInt operator+(const BigInt &lhs, const BigInt &rhs) {
+    return addOrSub(lhs, rhs, false);
 }
 
 BigInt operator-(const BigInt &lhs, const BigInt &rhs) {
-    if(lhs.sign != rhs.sign)
-        return addData(lhs,rhs).setSign(lhs.sign);
-
-    if(compareData(lhs, rhs) >= 0){
-        return substractData(lhs,rhs).setSign(lhs.sign);
-    }else{
-        return substractData(rhs, lhs).setSign(rhs.sign);
-    }
+    return addOrSub(lhs, rhs, true);
 }
 
 BigInt multiplyData(const BigInt &lhs, const BigInt &rhs) {
@@ -150,6 +147,7 @@ BigInt multiplyData(const BigInt &lhs, const BigInt &rhs) {
             carry = cur / BigInt::base;
         }
     }
+    result.removeZeros();
     return result;
 }
 
@@ -172,7 +170,7 @@ bool operator==(const BigInt &lhs, const BigInt &rhs) {
 }
 
 BigInt &BigInt::setSign(int new_sign) {
-    this->sign = new_sign;
+    this->sign = (new_sign >= 0 ? 1 : -1);
     return *this;
 }
 
@@ -203,6 +201,14 @@ bool operator>=(const BigInt &lhs, const BigInt &rhs) {
 
 bool operator!=(const BigInt &lhs, const BigInt &rhs) {
     return !(lhs == rhs);
+}
+
+BigInt operator*(const BigInt &lhs, const BigInt &rhs) {
+    return multiplyData(lhs, rhs).setSign((lhs.isZero() || rhs.isZero()) ? 1 : lhs.sign * rhs.sign);
+}
+
+bool BigInt::isZero() const {
+    return sign == 1 && data.size() == 1 && data.front() == 0;
 }
 
 

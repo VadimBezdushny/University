@@ -31,7 +31,7 @@ public:
 
     BigInt(long long num) : BigInt(std::to_string(num)) {}
 
-
+    bool isZero() const;
     void removeZeros();
 
     std::string to_string();
@@ -49,6 +49,7 @@ public:
 
     friend BigInt operator+(const BigInt &lhs, const BigInt &rhs);
     friend BigInt operator-(const BigInt &lhs, const BigInt &rhs);
+    friend BigInt operator*(const BigInt &lhs, const BigInt &rhs);
 
     friend bool operator==(const BigInt &lhs, const BigInt &rhs);
 
