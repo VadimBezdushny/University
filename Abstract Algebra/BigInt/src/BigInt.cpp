@@ -5,22 +5,17 @@
 #include <cassert>
 #include "BigInt.h"
 
-BigInt::BigInt(std::string s) {
-    if (s.empty()) {
-        throw; // TODO
-    }
-    sign = 0;
-    std::string::iterator head = s.begin();
-    if (isdigit(*head)) { // TODO : check isdigit for char
+BigInt::BigInt(const std::string &s) {
+    sign = 1;
+    if (s.empty())
+        return;
+
+    std::string::const_iterator head = s.begin();
+    if (!isdigit(*head)) {
         if (s[0] == '-')
             sign = -1;
-        else if (s[0] == '+')
-            sign = 1;
-        else
-            throw; // TODO
         head++;
     }
-    std::reverse(head, s.end());
 
     data.reserve(static_cast<unsigned long>(std::distance(head, s.end())));
 
@@ -30,9 +25,13 @@ BigInt::BigInt(std::string s) {
         }
         head++;
     }
+    std::reverse(data.begin(), data.end());
+    removeZeros();
+    if (data.size() == 1 || data.front() == 0)
+        sign = 1;
 }
 
-BigInt BigInt::addData(const BigInt &lhs, const BigInt &rhs) {
+BigInt addData(const BigInt &lhs, const BigInt &rhs) {
     /*
      * Add two numbers ignoring sign
      */
@@ -58,7 +57,7 @@ BigInt BigInt::addData(const BigInt &lhs, const BigInt &rhs) {
     return result;
 }
 
-BigInt BigInt::substractData(const BigInt &lhs, const BigInt &rhs) {
+BigInt substractData(const BigInt &lhs, const BigInt &rhs) {
     /*
      * Substract two numbers ignoring sign, lhs >= rhs
      *
@@ -84,7 +83,7 @@ BigInt BigInt::substractData(const BigInt &lhs, const BigInt &rhs) {
 }
 
 
-int BigInt::compare(const BigInt &lhs, const BigInt &rhs) {
+int compare(const BigInt &lhs, const BigInt &rhs) {
     /*
      * takes two numbers
      *
@@ -96,27 +95,51 @@ int BigInt::compare(const BigInt &lhs, const BigInt &rhs) {
     if (lhs.sign != rhs.sign) {
         return (lhs.sign > rhs.sign ? 1 : -1);
     }
+    return compareData(lhs, rhs) * lhs.sign;
+}
 
-    bool inverted_answer = (lhs.sign == -1);
+int compareData(const BigInt &lhs, const BigInt &rhs) {
     if (lhs.data.size() != rhs.data.size()) {
-        return (lhs.data.size() > rhs.data.size() ^ inverted_answer ? 1 : -1);
+        return (lhs.data.size() > rhs.data.size() ? 1 : -1);
     }
-    auto lhs_iter = lhs.data.rbegin(), rhs_iter = rhs.data.rbegin();
-    while (lhs_iter != lhs.data.rend() && rhs_iter != rhs.data.rend()) {
+
+    for (auto lhs_iter = lhs.data.rbegin(), rhs_iter = rhs.data.rbegin();
+         lhs_iter != lhs.data.rend() && rhs_iter != rhs.data.rend();
+         lhs_iter++, rhs_iter++) {
         if (*lhs_iter != *rhs_iter) {
-            return (*lhs_iter > *rhs_iter ^ inverted_answer ? 1 : -1);
+            return (*lhs_iter > *rhs_iter ? 1 : -1);
         }
-        lhs_iter++;
-        rhs_iter++;
     }
     return 0;
 }
 
+
+BigInt addOrSub(const BigInt &lhs, const BigInt &rhs, bool subs) {
+
+}
 BigInt operator+(const BigInt &lhs, const BigInt &rhs) {
-    return BigInt();
+    if (lhs.sign == rhs.sign)
+        return addData(lhs, rhs).setSign(lhs.sign);
+
+    if(compareData(lhs, rhs) >= 0){
+        return substractData(lhs,rhs).setSign(lhs.sign);
+    }else{
+        return substractData(rhs, lhs).setSign(rhs.sign);
+    }
 }
 
-BigInt BigInt::multiplyData(const BigInt &lhs, const BigInt &rhs) {
+BigInt operator-(const BigInt &lhs, const BigInt &rhs) {
+    if(lhs.sign != rhs.sign)
+        return addData(lhs,rhs).setSign(lhs.sign);
+
+    if(compareData(lhs, rhs) >= 0){
+        return substractData(lhs,rhs).setSign(lhs.sign);
+    }else{
+        return substractData(rhs, lhs).setSign(rhs.sign);
+    }
+}
+
+BigInt multiplyData(const BigInt &lhs, const BigInt &rhs) {
     BigInt result;
     result.data.resize(lhs.data.size() + rhs.data.size());
     for (std::size_t i = 0; i < lhs.data.size(); i++) {
@@ -131,6 +154,55 @@ BigInt BigInt::multiplyData(const BigInt &lhs, const BigInt &rhs) {
 }
 
 void BigInt::removeZeros() {
-    while(data.size() > 1 && data.back() == 0)
+    while (data.size() > 1 && data.back() == 0)
         data.pop_back();
 }
+
+std::string BigInt::to_string() {
+    std::string result;
+    if (sign == -1) result += "-";
+    for (auto it = data.rbegin(); it != data.rend(); it++) {
+        result.append(std::to_string(*it));
+    }
+    return result;
+}
+
+bool operator==(const BigInt &lhs, const BigInt &rhs) {
+    return lhs.sign == rhs.sign && lhs.data == rhs.data;
+}
+
+BigInt &BigInt::setSign(int new_sign) {
+    this->sign = new_sign;
+    return *this;
+}
+
+int BigInt::getSign() {
+    return sign;
+}
+
+void PrintTo(const BigInt &num, std::ostream *os) {
+    *os << num.sign << "*";
+    std::copy(num.data.rbegin(), num.data.rend(), std::ostream_iterator<uint>(*os, ""));
+}
+
+bool operator<(const BigInt &lhs, const BigInt &rhs) {
+    return compare(lhs, rhs) == -1;
+}
+
+bool operator>(const BigInt &lhs, const BigInt &rhs) {
+    return compare(lhs, rhs) == 1;
+}
+
+bool operator<=(const BigInt &lhs, const BigInt &rhs) {
+    return compare(lhs, rhs) <= 0;
+}
+
+bool operator>=(const BigInt &lhs, const BigInt &rhs) {
+    return compare(lhs, rhs) >= 0;
+}
+
+bool operator!=(const BigInt &lhs, const BigInt &rhs) {
+    return !(lhs == rhs);
+}
+
+
