@@ -38,6 +38,7 @@ BigInt addData(const BigInt &lhs, const BigInt &rhs) {
 
     BigInt result;
 
+    result.data.clear();
     result.data.reserve(std::max(lhs.data.size(), rhs.data.size()));
     auto lhs_iter = lhs.data.begin(), rhs_iter = rhs.data.begin();
 
@@ -63,6 +64,7 @@ BigInt substractData(const BigInt &lhs, const BigInt &rhs) {
      *
      */
     BigInt result;
+    result.data.clear();
     auto lhs_iter = lhs.data.begin(), rhs_iter = rhs.data.begin();
     uint need = 0;
     while (lhs_iter != lhs.data.end()) {
@@ -116,16 +118,17 @@ int compareData(const BigInt &lhs, const BigInt &rhs) {
 
 
 BigInt addOrSub(const BigInt &lhs, const BigInt &rhs, bool substract) {
-    // if flag substract is true we subtract data
+    // if substract == true we subtract data
 
-    if ((lhs.sign == rhs.sign) ^ substract)
+    if ((lhs.sign == rhs.sign) ^ substract) {
         return addData(lhs, rhs).setSign(lhs.sign);
+    }
 
     // Why it works ?
+    int new_rhs_sign = (substract ? rhs.sign : -rhs.sign);
     int cmp_value = compareData(lhs, rhs);
-    int new_sign = (substract ? rhs.sign : -rhs.sign);
-    BigInt result = (cmp_value == 1 ? substractData(lhs, rhs): substractData(rhs, lhs));
-    return result.setSign(cmp_value * new_sign);
+    BigInt result = (cmp_value == 1 ? substractData(lhs, rhs) : substractData(rhs, lhs));
+    return result.setSign(cmp_value * new_rhs_sign);
 }
 
 BigInt operator+(const BigInt &lhs, const BigInt &rhs) {
@@ -152,6 +155,10 @@ BigInt multiplyData(const BigInt &lhs, const BigInt &rhs) {
 }
 
 void BigInt::removeZeros() {
+    if (data.empty()) {
+        this->data.push_back(0);
+        this->sign = 1;
+    }
     while (data.size() > 1 && data.back() == 0)
         data.pop_back();
 }
@@ -165,9 +172,6 @@ std::string BigInt::to_string() {
     return result;
 }
 
-bool operator==(const BigInt &lhs, const BigInt &rhs) {
-    return lhs.sign == rhs.sign && lhs.data == rhs.data;
-}
 
 BigInt &BigInt::setSign(int new_sign) {
     this->sign = (new_sign >= 0 ? 1 : -1);
@@ -183,12 +187,16 @@ void PrintTo(const BigInt &num, std::ostream *os) {
     std::copy(num.data.rbegin(), num.data.rend(), std::ostream_iterator<uint>(*os, ""));
 }
 
+bool operator==(const BigInt &lhs, const BigInt &rhs) {
+    return compare(lhs, rhs) == 0;
+}
+
 bool operator<(const BigInt &lhs, const BigInt &rhs) {
-    return compare(lhs, rhs) == -1;
+    return compare(lhs, rhs) < 0;
 }
 
 bool operator>(const BigInt &lhs, const BigInt &rhs) {
-    return compare(lhs, rhs) == 1;
+    return compare(lhs, rhs) > 0;
 }
 
 bool operator<=(const BigInt &lhs, const BigInt &rhs) {
@@ -200,8 +208,9 @@ bool operator>=(const BigInt &lhs, const BigInt &rhs) {
 }
 
 bool operator!=(const BigInt &lhs, const BigInt &rhs) {
-    return !(lhs == rhs);
+    return compare(lhs, rhs) != 0;
 }
+
 
 BigInt operator*(const BigInt &lhs, const BigInt &rhs) {
     return multiplyData(lhs, rhs).setSign((lhs.isZero() || rhs.isZero()) ? 1 : lhs.sign * rhs.sign);
@@ -209,6 +218,80 @@ BigInt operator*(const BigInt &lhs, const BigInt &rhs) {
 
 bool BigInt::isZero() const {
     return sign == 1 && data.size() == 1 && data.front() == 0;
+}
+
+BigInt &BigInt::operator<<=(int size) {
+    size_t initial_size = data.size();
+    data.resize(initial_size + size);
+    std::copy(data.begin(), data.begin() + initial_size, data.begin() + size);
+    std::fill(data.begin(), data.begin() + size, 0);
+    return *this;
+}
+
+BigInt &BigInt::operator>>=(int size) {
+    std::copy(data.begin() + size, data.end(), data.begin());
+    data.resize(data.size() - size);
+    removeZeros();
+    return *this;
+}
+
+void divModData(BigInt lhs, BigInt rhs, BigInt &div, BigInt &mod) {
+    BigInt z = 1;
+    int k = 0;
+    while (lhs >= rhs) {
+        rhs <<= 1;
+        z <<= 1;
+        k++;
+    }
+    while (k > 0) {
+        rhs >>= 1;
+        z >>= 1;
+        k--;
+        while (lhs >= rhs) {
+            lhs = lhs - rhs;
+            div = div + z;
+        }
+    }
+    mod = lhs;
+}
+
+BigInt operator/(const BigInt &lhs, const BigInt &rhs) {
+    BigInt div, mod;
+    divModData(BigInt(lhs), BigInt(rhs), div, mod);
+    return div.setSign((lhs.isZero() || rhs.isZero()) ? 1 : lhs.sign * rhs.sign); // TODO:check
+}
+
+BigInt operator%(const BigInt &lhs, const BigInt &rhs) {
+    BigInt div, mod;
+    divModData(BigInt(lhs), BigInt(rhs), div, mod);
+    return mod.setSign(rhs.sign); // TODO:check
+}
+
+BigInt BigInt::sqrt() {
+    if(*this < 0) throw;
+    if(*this == 0) return BigInt(0);
+    BigInt curr = BigInt(1), next;
+    curr <<= (this->data.size() + 1/2);
+    int k = 0;
+    while(true){
+        next = (curr + *this/curr) / 2;
+        if(next >= curr){
+            return curr;
+        }
+        curr = next;
+    }
+}
+
+BigInt pow(BigInt base, BigInt power) {
+    BigInt res = 1;
+    while(power > 0){
+        if(power % 2 == 1){
+            res = res * base;
+        }
+        base = base * base;
+        power = power / 2;
+    }
+    return res;
 }
 
 

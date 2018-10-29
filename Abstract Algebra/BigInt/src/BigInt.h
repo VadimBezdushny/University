@@ -13,8 +13,6 @@
 #include <iostream>
 
 
-typedef unsigned uint;
-
 class BigInt {
     friend class BigIntTest;
 
@@ -23,7 +21,7 @@ public:
     int sign;
     std::vector<uint> data;
 
-    BigInt() : sign(0) {}
+    BigInt() : BigInt(0) {}
 
     BigInt(const std::string &s);
 
@@ -32,6 +30,7 @@ public:
     BigInt(long long num) : BigInt(std::to_string(num)) {}
 
     bool isZero() const;
+
     void removeZeros();
 
     std::string to_string();
@@ -44,12 +43,24 @@ public:
 
     friend BigInt multiplyData(const BigInt &lhs, const BigInt &rhs);
 
+    friend void divModData(BigInt lhs, BigInt rhs, BigInt &div, BigInt &mod);
+
+    friend BigInt pow(BigInt base, BigInt power);
+
+    BigInt sqrt();
+
 public:
     friend int compare(const BigInt &lhs, const BigInt &rhs);
 
     friend BigInt operator+(const BigInt &lhs, const BigInt &rhs);
+
     friend BigInt operator-(const BigInt &lhs, const BigInt &rhs);
+
     friend BigInt operator*(const BigInt &lhs, const BigInt &rhs);
+
+    friend BigInt operator/(const BigInt &lhs, const BigInt &rhs);
+
+    friend BigInt operator%(const BigInt &lhs, const BigInt &rhs);
 
     friend bool operator==(const BigInt &lhs, const BigInt &rhs);
 
@@ -62,6 +73,10 @@ public:
     friend bool operator>=(const BigInt &lhs, const BigInt &rhs);
 
     friend bool operator!=(const BigInt &lhs, const BigInt &rhs);
+
+    BigInt &operator<<=(int size);
+
+    BigInt &operator>>=(int size);
 
     BigInt &setSign(int new_sign);
 
