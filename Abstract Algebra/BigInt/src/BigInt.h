@@ -11,9 +11,10 @@
 #include <ostream>
 #include <iterator>
 #include <iostream>
+#include "BigUint.h"
 
 
-class BigInt {
+class BigInt : public BigUint{
     friend class BigIntTest;
 
 public:
@@ -36,14 +37,6 @@ public:
     std::string to_string();
 
     friend int compareData(const BigInt &lhs, const BigInt &rhs);
-
-    friend BigInt addData(const BigInt &lhs, const BigInt &rhs);
-
-    friend BigInt substractData(const BigInt &lhs, const BigInt &rhs);
-
-    friend BigInt multiplyData(const BigInt &lhs, const BigInt &rhs);
-
-    friend void divModData(BigInt lhs, BigInt rhs, BigInt &div, BigInt &mod);
 
     friend BigInt pow(BigInt base, BigInt power);
 

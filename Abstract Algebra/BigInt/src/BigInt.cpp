@@ -270,6 +270,7 @@ BigInt operator%(const BigInt &lhs, const BigInt &rhs) {
 BigInt BigInt::sqrt() {
     if(*this < 0) throw;
     if(*this == 0) return BigInt(0);
+
     BigInt curr = BigInt(1), next;
     curr <<= (this->data.size() + 1/2);
     int k = 0;
