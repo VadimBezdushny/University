@@ -126,7 +126,7 @@ BigInt addOrSub(const BigInt &lhs, const BigInt &rhs, bool substract) {
 
     // Why it works ?
     int new_rhs_sign = (substract ? rhs.sign : -rhs.sign);
-    int cmp_value = compareData(lhs, rhs);
+    int cmp_value = BigUint::sqrt();
     BigInt result = (cmp_value == 1 ? substractData(lhs, rhs) : substractData(rhs, lhs));
     return result.setSign(cmp_value * new_rhs_sign);
 }
