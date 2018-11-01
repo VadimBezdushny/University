@@ -27,16 +27,24 @@ public:
 
     void removeZeros();
 
-    std::string to_string();
+    std::string to_string() const;
 
-    friend void divModData(BigUint lhs, BigUint rhs, BigUint &div, BigUint &mod);
 
+    void divMod(BigUint lhs, BigUint rhs, BigUint &div, BigUint &mod);
+
+
+    /*
     friend BigUint pow(BigUint base, BigUint power);
 
     BigUint sqrt();
+     */
 
 public:
-    friend int compare(const BigUint &lhs, const BigUint &rhs);
+    void add(const BigUint &lhs, const BigUint &rhs);
+    void substract(const BigUint &lhs, const BigUint &rhs);
+    void multiply(const BigUint &lhs, const BigUint &rhs);
+
+    int compareTo(const BigUint &other) const;
 
     friend BigUint operator+(const BigUint &lhs, const BigUint &rhs);
 
@@ -64,7 +72,7 @@ public:
 
     BigUint &operator>>=(int size);
 
-    friend void PrintTo(const BigUint &num, std::ostream *os);
+    friend std::ostream& operator<<(std::ostream &os, const BigUint &num);
 };
 
 

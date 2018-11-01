@@ -14,19 +14,21 @@
 #include "BigUint.h"
 
 
-class BigInt : public BigUint{
+class BigInt{
     friend class BigIntTest;
 
 public:
     static const uint base = 10;
     int sign;
-    std::vector<uint> data;
+    BigUint mag;
 
     BigInt() : BigInt(0) {}
 
     BigInt(const std::string &s);
 
     BigInt(int num) : BigInt(std::to_string(num)) {}
+
+    BigInt(long num) : BigInt(std::to_string(num)) {}
 
     BigInt(long long num) : BigInt(std::to_string(num)) {}
 
@@ -36,6 +38,8 @@ public:
 
     std::string to_string();
 
+    void addOrSub(const BigInt &lhs, const BigInt &rhs, bool substract);
+
     friend int compareData(const BigInt &lhs, const BigInt &rhs);
 
     friend BigInt pow(BigInt base, BigInt power);
@@ -43,8 +47,15 @@ public:
     BigInt sqrt();
 
 public:
-    friend int compare(const BigInt &lhs, const BigInt &rhs);
+    int compareTo(const BigInt &other) const;
 
+    BigInt operator-() const{
+        BigInt res = *this;
+        if(!res.isZero())
+            res.sign *= -1;
+        return res;
+
+    }
     friend BigInt operator+(const BigInt &lhs, const BigInt &rhs);
 
     friend BigInt operator-(const BigInt &lhs, const BigInt &rhs);
@@ -71,11 +82,12 @@ public:
 
     BigInt &operator>>=(int size);
 
-    BigInt &setSign(int new_sign);
+    void setSign(int new_sign);
 
     int getSign();
 
     friend void PrintTo(const BigInt &num, std::ostream *os);
+    friend std::ostream& operator<<(std::ostream &os, const BigInt &num);
 };
 
 
