@@ -148,14 +148,19 @@ BigInt operator/(const BigInt &lhs, const BigInt &rhs) {
 
 BigInt operator%(const BigInt &lhs, const BigInt &rhs) {
     BigInt res;
-    res.mag = lhs.mag % rhs.mag;
-    res.setSign(rhs.sign); // TODO:check
+    res = lhs - (lhs/rhs)*rhs;
     return res;
 }
 
 std::ostream &operator<<(std::ostream &os, const BigInt &num) {
     os << (num.sign==1?"":"-") + num.mag.to_string();
     return os;
+}
+
+std::istream &operator>>(std::istream &is, BigInt &num) {
+    std::string s;
+    std::cin >> s;
+    num = BigInt(s);
 }
 /*
 

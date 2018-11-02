@@ -87,6 +87,7 @@ public:
     int getSign();
 
     friend void PrintTo(const BigInt &num, std::ostream *os);
+    friend std::istream& operator>>(std::istream &is, BigInt &num);
     friend std::ostream& operator<<(std::ostream &os, const BigInt &num);
 };
 

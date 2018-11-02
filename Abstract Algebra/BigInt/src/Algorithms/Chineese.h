@@ -6,42 +6,35 @@
 #define BIGINT_PROJECT_CHINEESE_H
 
 #include "BigInt/BigInt.h"
-
-class Ring {
-public:
-    BigInt mod;
-    Ring(BigInt mod):mod(mod){}
-
-    BigInt norm(BigInt num){
-        if(num >= 0){
-            return num % mod;
-        }else{
-            return (num + (-num/mod + 2) * mod) % mod;
-        }
-    }
-    BigInt gcdex(BigInt a, BigInt b, BigInt &x, BigInt &y) {
-        if (a == 0) {
-            x = 0;
-            y = 1;
-            return b;
-        }
-        BigInt x1, y1, d;
-        d = gcdex(b % a, a, x1, y1);
-        x = y1 - (b / a) * x1;
-        y = x1;
-        return d;
-    }
-
-    BigInt inverse(BigInt num) {
-        BigInt x, y, g;
-        g = gcdex(num, mod, x, y);
-        if(g != 1){
-            throw;
-        }
-        return norm(x);
-    }
-};
+#include "Ring.h"
 namespace Algorithms {
+    BigInt sqrt(BigInt num) {
+        if(num == 0) return BigInt(0);
+
+        BigInt curr = BigInt(1), next;
+        curr <<= (num.mag.data.size() + 1/2);// TODO: FIX
+        int k = 0;
+        while(true){
+            next = (curr + num/curr) / 2;
+            if(next >= curr){
+                return curr;
+            }
+            curr = next;
+        }
+    }
+
+    BigInt pow(BigInt base, BigInt power) {
+        BigInt res = 1;
+        while(power > 0){
+            if(power % 2 == 1){
+                res = res * base;
+            }
+            base = base * base;
+            power = power / 2;
+        }
+        return res;
+    }
+
     BigInt chineese(vector<pair<BigInt, BigInt>> nums) {
         size_t n = nums.size();
 
@@ -49,8 +42,6 @@ namespace Algorithms {
         for(int i = 0; i < n; i++){
             for(int j = i+1; j < n; j++){
                 rev[i][j] = Ring(nums[j].second).inverse(nums[i].second);
-                std::cout << rev[i][j] << " " <<
-                nums[i].second << " " << nums[j].second << std::endl;
             }
         }
         vector<BigInt> x(n);
