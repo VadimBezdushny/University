@@ -1,5 +1,9 @@
 project(Algorithms)
 
-set(SOURCE_FILES Chineese.cc Chineese.h Ring.cc Ring.h)
+set(HEADER_FILES Algorithms.h)
 
-add_library(Algorithms STATIC ${SOURCE_FILES})
+set(SOURCE_FILES Algorithms.cc)
+
+add_library(Algorithms STATIC ${SOURCE_FILES} ${HEADER_FILES})
+
+target_link_libraries(Algorithms Console)

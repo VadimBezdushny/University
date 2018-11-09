@@ -9,7 +9,7 @@ include_directories(lib/googletest/googlemock/include)
 
 add_executable(runBigIntTests InitTests.cpp ArithmeticTests.cpp AlgoTests.cc)
 
-target_link_libraries(runBigIntTests BigInt)
+target_link_libraries(runBigIntTests BigInt Algorithms)
 target_link_libraries(runBigIntTests gtest gtest_main)
 
 

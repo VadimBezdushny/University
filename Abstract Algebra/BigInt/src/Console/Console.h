@@ -5,6 +5,10 @@
 #ifndef BIGINT_PROJECT_CONSOLE_H
 #define BIGINT_PROJECT_CONSOLE_H
 
+#include "BigInt/BigInt.h"
+#include "Algorithms/Algorithms.h"
+#include <iostream>
+#include <set>
 
 class Console {
 public:

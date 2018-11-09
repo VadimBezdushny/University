@@ -10,4 +10,5 @@ include_directories(src)
 add_subdirectory(src)
 add_subdirectory(Tests)
 
-target_link_libraries(BigInt_project_run BigInt)
+
+target_link_libraries(BigInt_project_run BigInt Algorithms Console)

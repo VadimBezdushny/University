@@ -1,2 +1,0 @@
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir

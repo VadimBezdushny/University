@@ -37,6 +37,9 @@ public:
     void removeZeros();
 
     std::string to_string();
+    explicit operator int() const{
+        return sign * int(mag);
+    }
 
     void addOrSub(const BigInt &lhs, const BigInt &rhs, bool substract);
 

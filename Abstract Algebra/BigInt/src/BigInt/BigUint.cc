@@ -92,7 +92,12 @@ int BigUint::compareTo(const BigUint &other) const{
 
 
 
+
+
 void divMod(BigUint lhs, BigUint rhs, BigUint &div, BigUint &mod) {
+    if(rhs == 0){
+        throw exception();
+    }
     BigUint z = 1;
     int k = 0;
     while (lhs >= rhs) {
@@ -123,33 +128,6 @@ BigUint operator%(const BigUint &lhs, const BigUint &rhs) {
     divMod(lhs, rhs, div, mod);
     return mod;
 }
-
-/*BigUint pow(BigUint base, BigUint power) {
-    BigUint res = 1;
-    while (power > 0) {
-        if (power % 2 == 1) {
-            res = res * base;
-        }
-        base = base * base;
-        power = power / 2;
-    }
-    return res;
-}
-
-BigUint BigUint::sqrt() {
-    if (*this == 0) return BigUint(0);
-
-    BigUint curr = 1, next;
-    curr <<= (this->data.size() + 1 / 2);
-    int k = 0;
-    while (true) {
-        next = (curr + *this / curr) / 2;
-        if (next >= curr) {
-            return curr;
-        }
-        curr = next;
-    }
-}*/
 
 void BigUint::add(const BigUint &lhs, const BigUint &rhs) {
     data.resize(std::max(lhs.data.size(), rhs.data.size()) + 1);

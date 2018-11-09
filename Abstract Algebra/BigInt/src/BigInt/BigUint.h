@@ -28,16 +28,9 @@ public:
     void removeZeros();
 
     std::string to_string() const;
-
-
-    void divMod(BigUint lhs, BigUint rhs, BigUint &div, BigUint &mod);
-
-
-    /*
-    friend BigUint pow(BigUint base, BigUint power);
-
-    BigUint sqrt();
-     */
+    explicit operator int() const{
+        return std::stoi(this->to_string());
+    }
 
 public:
     void add(const BigUint &lhs, const BigUint &rhs);
