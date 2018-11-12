@@ -94,11 +94,11 @@ TEST(IsPrimeFermat, FERMAT_1){
 }
 
 
-
-TEST(IsPrimeMillerRabin, Rabbin_1){
-    /*
-     * Arnault, F. (1995). Constructing Carmichael Numbers which are Strong Pseudoprimes to Several Bases. Journal of Symbolic Computation, 20(2), 151–161. doi:10.1006/jsco.1995.1042
-     */
-    ASSERT_TRUE(); // Arnolt 397
-
+TEST(logMod, LOG_MOD_1){
+    BigInt base = 3, ans = 13, mod = 17;
+    ASSERT_EQ(ans, Algo::powMod(base, Algo::logMod(base, ans, mod), mod));
+}
+TEST(logMod, LOG_MOD_2){
+    BigInt base = 5, ans = 34, mod = 91;
+    ASSERT_EQ(ans, Algo::powMod(base, Algo::logMod(base, ans, mod), mod));
 }

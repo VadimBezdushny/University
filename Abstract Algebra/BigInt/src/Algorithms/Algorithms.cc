@@ -265,19 +265,18 @@ namespace Algo{
         }
         return res;
     }
-    BigInt logMod(BigInt base, BigInt ans, BigInt mod){
+    BigInt logMod(BigInt base, BigInt ans, BigInt mod) {
         // Baby step giant step
 
         if(gcd(base, mod) != 1) return -1;
 
         BigInt block_size = sqrt(mod) + 1;
-
         BigInt giant_step = powMod(base, block_size, mod);
 
         // Giant step
         std::map<BigInt, BigInt> giant_steps;
         BigInt curr = giant_step;
-        for(BigInt i = block_size; i < mod; i = i + block_size){
+        for(BigInt i = 1; i <= block_size; i = i + 1){
             if(!giant_steps.count(curr))
                 giant_steps[curr] = i;
             curr = mulMod(curr, giant_step, mod);
@@ -285,16 +284,17 @@ namespace Algo{
 
         // Small step
         curr = ans;
-        for(BigInt i = 0; i < block_size; i = i + 1){
+        for(BigInt i = 0; i <= block_size; i = i + 1){
             if(giant_steps.count(curr)){
-                BigInt ans = giant_steps[curr] * block_size - i;
-                if(ans < mod)
-                    return ans;
+                BigInt res = giant_steps[curr] * block_size - i;
+                if(res < mod)
+                    return res;
             }
             curr = mulMod(curr, base, mod);
         }
         return -1;
     }
+
     BigInt normMod(BigInt num, BigInt mod) {
         if(num >= 0){
             return num % mod;

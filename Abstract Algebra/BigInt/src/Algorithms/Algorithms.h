@@ -37,6 +37,8 @@ namespace Algo {
 
     void sieve(int num, std::vector<int> &primes, std::vector<int> &least_prime);
 
+    BigInt logMod(BigInt base, BigInt ans, BigInt mod);
+
     BigInt abs(BigInt num);
 
     int legendre_symbol(BigInt a, BigInt p);
