@@ -13,7 +13,7 @@ namespace Algo{
         if (num == 0) return BigInt(0);
 
         BigInt curr = BigInt(1), next;
-        curr <<= (num.mag.data.size() + 1 / 2);// TODO: FIX
+        curr <<= (num.len() + 1 / 2);// TODO: FIX
         int k = 0;
         while (true) {
             next = (curr + num / curr) / 2;
@@ -141,40 +141,33 @@ namespace Algo{
             return ans;
     }
 
-    BigInt _pollardRhoNextNum(BigInt num, BigInt mod) {
-        return BigInt();
+    BigInt _pollardRhoNextNum(BigInt num, BigInt step, BigInt mod) {
+        return addMod(mulMod(num, num, mod), step, mod);
     }
 
-    BigInt pollardRhoIteration(BigInt num) {
+    BigInt pollardRhoIteration(BigInt num, BigInt step) {
         /*
          * returns prime dividor of num
          */
-        BigInt walker = 2, runner = 2, div = 1;
-        BigInt ring(num);
-        while (div == 1) {
-            walker = _pollardRhoNextNum(walker, ring);
-            runner = _pollardRhoNextNum(_pollardRhoNextNum(runner, ring), ring);
+        BigInt walker = 2, runner = _pollardRhoNextNum(walker), div = 1;
+        while (div == 1 || div == num) {
+            walker = _pollardRhoNextNum(walker, step, num);
+            runner = _pollardRhoNextNum(_pollardRhoNextNum(runner, step, num), step, num);
             div = gcd(abs(walker - runner), num);
         }
-        if (div == num) {
-            return 1;
-        } else {
-            return div;
-        }
-
-
+        return div;
     }
 
     vector<int> getFirstPrimesLessK(BigInt num);
 
 
-    bool isPrimeDummy(BigInt num, int num_primes = -1){
+    bool isPrimeDummy(BigInt num, int num_primes) {
         vector<int> primes, least_prime;
 
         if(num_primes > 0)
             primes = getFirstKprimes(num_primes);
         else
-            sieve(int(sqrt(num)+1), primes, least_prime);
+            sieve(int(sqrt(num)), primes, least_prime);
 
         for(auto prime_num:primes)
             if(num % prime_num == 0)
@@ -216,6 +209,34 @@ namespace Algo{
             }
             return false;
         }
+        return true;
+    }
+
+    std::vector<std::pair<BigInt, int>> factorize(BigInt num){
+        BigInt margin = sqrt(num);
+        vector<int> primes = getFirstPrimesLessK(std::min<BigInt>(sqrt(num), 10000));
+        std::vector<std::pair<BigInt, int>> ans;
+        for(auto prime_num:primes){
+            if(num % prime_num == 0){
+                int cnt = 0;
+                while(num % prime_num == 0){
+                    num = num / prime_num;
+                    cnt++;
+                }
+                ans.push_back({prime_num, cnt});
+            }
+        }
+        while(isPrime(num)){
+
+        }
+    }
+
+    bool isPrime(BigInt num) {
+        int num_rounds = num.len() + 3;
+        std::cout << num << " " << num_rounds << endl;
+        if(num.len() <= 100) return isPrimeDummy(num);
+        if(!isPrimeDummy(num, num_rounds)) return false;
+        if(!isPrimeMillerRabin(num, num_rounds)) return false;
         return true;
     }
 

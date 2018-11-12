@@ -43,11 +43,7 @@ public:
 
     void addOrSub(const BigInt &lhs, const BigInt &rhs, bool substract);
 
-    friend int compareData(const BigInt &lhs, const BigInt &rhs);
-
-    friend BigInt pow(BigInt base, BigInt power);
-
-    BigInt sqrt();
+    int len(){return mag.len();}
 
 public:
     int compareTo(const BigInt &other) const;

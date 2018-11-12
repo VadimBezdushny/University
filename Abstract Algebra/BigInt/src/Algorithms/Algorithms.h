@@ -45,7 +45,12 @@ namespace Algo {
 
     int Jacobi_symbol(BigInt a, BigInt b);
 
+    bool isPrime(BigInt num);
+
+    bool isPrimeDummy(BigInt num, int num_primes = -1);
+
     bool isPrimeFermat(BigInt num, int num_rounds);
+
     bool isPrimeMillerRabin(BigInt num, int num_rounds);
 
     BigInt _pollardRhoNextNum(BigInt num);

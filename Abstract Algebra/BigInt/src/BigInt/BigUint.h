@@ -27,6 +27,10 @@ public:
 
     void removeZeros();
 
+    int len() const{
+        return data.size();
+    }
+
     std::string to_string() const;
     explicit operator int() const{
         return std::stoi(this->to_string());
