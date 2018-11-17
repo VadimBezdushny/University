@@ -1,0 +1,50 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/Algorithms/Algorithms.h
+map
+-
+BigInt/BigInt.h
+../src/Algorithms/BigInt/BigInt.h
+
+../src/BigInt/BigInt.h
+vector
+-
+string
+-
+algorithm
+-
+ostream
+-
+iterator
+-
+iostream
+-
+BigUint.h
+../src/BigInt/BigUint.h
+
+../src/BigInt/BigUint.h
+vector
+-
+string
+-
+
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Console/Console.cc
+Console.h
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Console/Console.h
+
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Console/Console.h
+BigInt/BigInt.h
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Console/BigInt/BigInt.h
+Algorithms/Algorithms.h
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Console/Algorithms/Algorithms.h
+iostream
+-
+set
+-
+

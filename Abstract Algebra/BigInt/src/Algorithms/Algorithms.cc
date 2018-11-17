@@ -141,6 +141,8 @@ namespace Algo{
             return ans;
     }
 
+
+
     BigInt _pollardRhoNextNum(BigInt num, BigInt step, BigInt mod) {
         return addMod(mulMod(num, num, mod), step, mod);
     }
@@ -149,27 +151,41 @@ namespace Algo{
         /*
          * returns prime dividor of num
          */
-        BigInt walker = 2, runner = _pollardRhoNextNum(walker), div = 1;
-        while (div == 1 || div == num) {
-            walker = _pollardRhoNextNum(walker, step, num);
-            runner = _pollardRhoNextNum(_pollardRhoNextNum(runner, step, num), step, num);
-            div = gcd(abs(walker - runner), num);
+        BigInt div = 1, one = 1;
+        BigInt x_fixed = 2,  x = 2;
+        int cycle = 2;
+        while (div == 1) {
+            int count = 1;
+            while(count <= cycle && div <= one){
+                x = addMod(mulMod(x, x, num), step, num);
+                div = gcd(abs(x - x_fixed), num);
+                count++;
+            }
+            cycle *= 2;
+            x_fixed = x;
         }
         return div;
     }
 
-    vector<int> getFirstPrimesLessK(BigInt num);
+    BigInt pollardRho(BigInt num) {
+        /*
+         * returns prime dividor of num
+         */
+        for(int i = 1; i <= 7; i+=2){
+            BigInt div = pollardRhoIteration(num, i);
+            if(div != 1 && div != num)
+                return div;
+        }
+        throw;
+    }
+
+
 
 
     bool isPrimeDummy(BigInt num, int num_primes) {
         vector<int> primes, least_prime;
 
-        if(num_primes > 0)
-            primes = getFirstKprimes(num_primes);
-        else
-            sieve(int(sqrt(num)), primes, least_prime);
-
-        for(auto prime_num:primes)
+        for(int prime_num = 2; prime_num < num_primes && prime_num * prime_num <= num; prime_num++)
             if(num % prime_num == 0)
                 return false;
 
@@ -212,51 +228,43 @@ namespace Algo{
         return true;
     }
 
-    std::vector<std::pair<BigInt, int>> factorize(BigInt num){
+
+
+    std::map<BigInt, int> factorize(BigInt num, bool dummy) {
         BigInt margin = sqrt(num);
-        vector<int> primes = getFirstPrimesLessK(std::min<BigInt>(sqrt(num), 10000));
-        std::vector<std::pair<BigInt, int>> ans;
-        for(auto prime_num:primes){
-            if(num % prime_num == 0){
-                int cnt = 0;
-                while(num % prime_num == 0){
-                    num = num / prime_num;
-                    cnt++;
+        std::map<BigInt, int> ans;
+        if(dummy) {
+            for(int prime_num = 2; prime_num < 1000 && prime_num * prime_num <= num; prime_num++){
+                if (num % prime_num == 0) {
+                    int cnt = 0;
+                    while (num % prime_num == 0) {
+                        num = num / prime_num;
+                        cnt++;
+                    }
+                    ans[prime_num] = ans[prime_num] + cnt;
                 }
-                ans.push_back({prime_num, cnt});
             }
         }
-        while(isPrime(num)){
-
+        if(isPrime(num)) {
+            ans[num] = ans[num] + 1;
+        }else{
+            BigInt div = pollardRho(num);
+            auto res1 = factorize(div, false);
+            auto res2 = factorize(num/div, false);
+            for(auto it:res1) ans[it.first] = ans[it.first] + it.second;
+            for(auto it:res2) ans[it.first] = ans[it.first] + it.second;
         }
+        return ans;
     }
 
     bool isPrime(BigInt num) {
         int num_rounds = num.len() + 3;
-        std::cout << num << " " << num_rounds << endl;
-        if(num.len() <= 100) return isPrimeDummy(num);
+        if(num.len() <= 4) return isPrimeDummy(num);
         if(!isPrimeDummy(num, num_rounds)) return false;
         if(!isPrimeMillerRabin(num, num_rounds)) return false;
         return true;
     }
 
-    std::vector<std::pair<BigInt, int>> factorize(BigInt num, int max_dummy_div) {
-        vector<std::pair<BigInt, int>> ans;
-        if (max_dummy_div > 0) {
-            vector<int> primes, least_prime;
-            sieve(max_dummy_div, primes, least_prime);
-            for (const auto &prime:primes) {
-                int cnt = 0;
-                while (num % prime == 0) {
-                    num = num / prime;
-                    cnt++;
-                }
-                if (cnt > 0) {
-                    ans.emplace_back(prime, cnt);
-                }
-            }
-        }
-    }
 
     BigInt gcd(BigInt a, BigInt b) {
         while (b != 0) {

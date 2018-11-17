@@ -18,7 +18,6 @@ class BigInt{
     friend class BigIntTest;
 
 public:
-    static const uint base = 10;
     int sign;
     BigUint mag;
 
@@ -36,7 +35,7 @@ public:
 
     void removeZeros();
 
-    std::string to_string();
+    std::string to_string() const;
     explicit operator int() const{
         return sign * int(mag);
     }

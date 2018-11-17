@@ -122,21 +122,72 @@ TEST(IsPrimeMillerRabin, MILLER_RABIN_1) {
     ASSERT_TRUE(Algo::isPrimeFermat(BigInt("340561"), 5)); // CARMICHAEL
 }
 
-TEST(IsPrime, Is_Prime) {
+TEST(IsPrime, 1) {
     const int MAX = 1'000'000;
     vector<int> pr, lp;
     Algo::sieve(MAX, pr, lp);
-    for (int i = MAX - 10000; i < MAX; i++) {
+    for (int i = MAX - 100; i < MAX; i++) {
         ASSERT_EQ(lp[i] == i, Algo::isPrime(i)) << " num:" << i;
     }
 }
 
-TEST(logMod, LOG_MOD_1) {
+TEST(logMod, 1) {
     BigInt base = 3, ans = 13, mod = 17;
     ASSERT_EQ(ans, Algo::powMod(base, Algo::logMod(base, ans, mod), mod));
 }
 
-TEST(logMod, LOG_MOD_2) {
+TEST(logMod, 2) {
     BigInt base = 5, ans = 34, mod = 91;
     ASSERT_EQ(ans, Algo::powMod(base, Algo::logMod(base, ans, mod), mod));
 }
+
+
+TEST(factorize, 1){
+    BigInt num("210"), res = 1;
+    map<BigInt, int> f = Algo::factorize(num);
+    string str;
+    for(auto it:f) res = res * Algo::pow(it.first, it.second), str += it.first.to_string() + ":" + std::to_string(it.second) + " ";
+    ASSERT_EQ(num, res) << res;
+}
+
+TEST(factorize, 2){
+    BigInt num("155861"), res = 1;
+    map<BigInt, int> f = Algo::factorize(num);
+    string str;
+    for(auto it:f) res = res * Algo::pow(it.first, it.second), str += it.first.to_string() + ":" + std::to_string(it.second) + " ";
+    ASSERT_EQ(num, res) << res;
+}
+TEST(factorize, 3){
+    BigInt num("299486755639"), res = 1;
+    map<BigInt, int> f = Algo::factorize(num);
+    string str;
+    for(auto it:f) res = res * Algo::pow(it.first, it.second), str += it.first.to_string() + ":" + std::to_string(it.second) + " ";
+    ASSERT_EQ(num, res) << res;
+}
+
+TEST(factorize, 4){
+    BigInt num = BigInt("38696309") * BigInt("65039389"), res = 1;
+    map<BigInt, int> f = Algo::factorize(num);
+    string str;
+    for(auto it:f) res = res * Algo::pow(it.first, it.second), str += it.first.to_string() + ":" + std::to_string(it.second) + " ";
+    ASSERT_EQ(num, res) << res;
+}
+
+
+TEST(factorize, 5){
+    BigInt num = BigInt("144883") * BigInt("2949377") * BigInt("17") * BigInt("19"), res = 1;
+    map<BigInt, int> f = Algo::factorize(num);
+    string str;
+    for(auto it:f) res = res * Algo::pow(it.first, it.second), str += it.first.to_string() + ":" + std::to_string(it.second) + " ";
+    ASSERT_EQ(num, res) << res;
+}
+
+
+TEST(factorize, 6){
+    BigInt num = BigInt("224287411") * BigInt("224287411") * BigInt("226013497") * BigInt("31"), res = 1;
+    map<BigInt, int> f = Algo::factorize(num);
+    string str;
+    for(auto it:f) res = res * Algo::pow(it.first, it.second), str += it.first.to_string() + ":" + std::to_string(it.second) + " ";
+    ASSERT_EQ(num, res) << res;
+}
+

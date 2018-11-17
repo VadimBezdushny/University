@@ -9,48 +9,53 @@
 
 using testing::Eq;
 
-TEST(BigIntTest, CONSTRUCTOR_TEST_POS1) {
+TEST(BigIntInit, 1) {
     BigUint num("123");
-    ASSERT_THAT(num.data, ::testing::ElementsAre(3, 2, 1));
+    ASSERT_THAT(num.data, ::testing::ElementsAre(123));
 }
 
-TEST(BigIntTest, CONSTRUCTOR_TEST_POS2) {
+TEST(BigIntInit, 2) {
     BigInt num("123857363");
     ASSERT_EQ(num.sign, 1);
-    ASSERT_THAT(num.mag.data, ::testing::ElementsAre(3, 6, 3, 7, 5, 8, 3, 2, 1));
+    ASSERT_THAT(num.mag.data, ::testing::ElementsAre(123857363));
+}
+TEST(BigIntInit, 3) {
+    BigInt num("123857 363456789");
+    ASSERT_EQ(num.sign, 1);
+    ASSERT_THAT(num.mag.data, ::testing::ElementsAre(363456789, 123857));
 }
 
-TEST(BigIntTest, CONSTRUCTOR_TEST_NEG) {
+TEST(BigIntInit, 4) {
     BigInt num("-143");
     ASSERT_EQ(num.sign, -1);
-    ASSERT_THAT(num.mag.data, ::testing::ElementsAre(3, 4, 1));
+    ASSERT_THAT(num.mag.data, ::testing::ElementsAre(143));
 }
 
-TEST(BigIntTest, CONSTRUCTOR_TEST_ZERO1) {
+TEST(BigIntInit, 5) {
     BigInt num("0");
     ASSERT_EQ(num.sign, 1);
     ASSERT_THAT(num.mag.data, ::testing::ElementsAre(0));
 }
 
-TEST(BigIntTest, CONSTRUCTOR_TEST_ZERO2) {
+TEST(BigIntInit, 6) {
     BigInt num("-0");
     ASSERT_EQ(num.sign, 1);
     ASSERT_THAT(num.mag.data, ::testing::ElementsAre(0));
 }
 
-TEST(BigIntTest, CONSTRUCTOR_TEST_ZERO3) {
+TEST(BigIntInit, 7) {
     BigInt num("+0");
     ASSERT_EQ(num.sign, 1);
     ASSERT_THAT(num.mag.data, ::testing::ElementsAre(0));
 }
 
-TEST(BigIntTest, CONSTRUCTOR_TEST_ZERO4) {
+TEST(BigIntInit, 8) {
     BigInt num("+000");
     ASSERT_EQ(num.sign, 1);
     ASSERT_THAT(num.mag.data, ::testing::ElementsAre(0));
 }
 
-TEST(BigIntTest, CONSTRUCTOR_TEST_ZERO5) {
+TEST(BigIntInit, 9) {
     BigInt num("-000");
     ASSERT_EQ(num.sign, 1);
     ASSERT_THAT(num.mag.data, ::testing::ElementsAre(0));

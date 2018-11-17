@@ -1,0 +1,4 @@
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" "/home/heimdall/Dev/University/Abstract Algebra/BigInt"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release

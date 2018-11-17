@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/BigInt_project_run.dir/main.cpp.o CMakeFiles/BigInt_project_run.dir/src/Console/Console.cc.o  -o BigInt_project_run src/BigInt/libBigInt.a src/Algorithms/libAlgorithms.a src/Console/libConsole.a src/Algorithms/libAlgorithms.a src/Console/libConsole.a 

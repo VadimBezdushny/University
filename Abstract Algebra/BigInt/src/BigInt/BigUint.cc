@@ -8,12 +8,13 @@
 #include <iostream>
 
 BigUint::BigUint(const std::string &s) {
-    data.reserve(s.size());
+    string temp(base_len, '0');
     for (auto ch:s)
         if (isdigit(ch))
-            data.push_back((uint) (ch - '0'));
-
-    std::reverse(data.begin(), data.end());
+            temp.push_back(ch);
+    for(int i = temp.size()-base_len; i >= 0; i -= base_len){
+        data.push_back(std::stoi(temp.substr(i,base_len)));
+    }
     removeZeros();
 }
 
@@ -29,7 +30,8 @@ void BigUint::removeZeros() {
 std::string BigUint::to_string() const {
     std::string result;
     for (auto it = data.rbegin(); it != data.rend(); it++) {
-        result.append(std::to_string(*it));
+        std::string limb = std::to_string(*it);
+        result.append(std::string(base_len - limb.length(), '0').append(limb));
     }
     return result;
 }
@@ -100,19 +102,29 @@ void divMod(BigUint lhs, BigUint rhs, BigUint &div, BigUint &mod) {
     }
     BigUint z = 1;
     int k = 0;
-    while (lhs >= rhs) {
+    while(lhs >= rhs){
         rhs <<= 1;
         z <<= 1;
         k++;
     }
-    while (k > 0) {
+
+    while(k > 0){
         rhs >>= 1;
         z >>= 1;
         k--;
-        while (lhs >= rhs) {
-            lhs = lhs - rhs;
-            div = div + z;
+
+        limb_t l = 0, r = BigUint::base, x = 0;
+        while(l <= r){
+            limb_t m = l + (r-l)/2;
+            if(lhs >= rhs*m){
+                x = m;
+                l = m + 1;
+            }else{
+                r = m - 1;
+            }
         }
+        lhs = lhs - rhs * x;
+        div = div + z * x;
     }
     mod = lhs;
 }
@@ -132,10 +144,10 @@ BigUint operator%(const BigUint &lhs, const BigUint &rhs) {
 void BigUint::add(const BigUint &lhs, const BigUint &rhs) {
     data.resize(std::max(lhs.data.size(), rhs.data.size()) + 1);
     auto lhs_iter = lhs.data.begin(), rhs_iter = rhs.data.begin();
-    uint carry = 0;
+    limb_t carry = 0;
     size_t tail = 0;
     while (carry > 0 || lhs_iter != lhs.data.end() || rhs_iter != rhs.data.end()) {
-        uint digit_sum = (lhs_iter != lhs.data.end() ? *lhs_iter : 0) +
+        limb_t digit_sum = (lhs_iter != lhs.data.end() ? *lhs_iter : 0) +
                          (rhs_iter != rhs.data.end() ? *rhs_iter : 0) +
                          carry;
 
@@ -154,12 +166,12 @@ void BigUint::substract(const BigUint &lhs, const BigUint &rhs) {
     }
     data.clear();
     auto lhs_iter = lhs.data.begin(), rhs_iter = rhs.data.begin();
-    uint need = 0;
+    limb_t need = 0;
     while (lhs_iter != lhs.data.end()) {
         auto rhs_digit = (rhs_iter != rhs.data.end() ? *rhs_iter : 0);
 
-        uint next_need = static_cast<uint>(*lhs_iter < rhs_digit + need);
-        uint next_digit = BigUint::base * next_need + *lhs_iter - rhs_digit - need;
+        limb_t next_need = static_cast<limb_t>(*lhs_iter < rhs_digit + need);
+        limb_t next_digit = BigUint::base * next_need + *lhs_iter - rhs_digit - need;
         data.push_back(next_digit);
 
         need = next_need;
@@ -175,9 +187,9 @@ void BigUint::substract(const BigUint &lhs, const BigUint &rhs) {
 void BigUint::multiply(const BigUint &lhs, const BigUint &rhs) {
     data.resize(lhs.data.size() + rhs.data.size());
     for (std::size_t i = 0; i < lhs.data.size(); i++) {
-        uint carry = 0;
+        limb_t carry = 0;
         for (std::size_t j = 0; carry || j < rhs.data.size(); j++) {
-            uint cur = data[i + j] + carry + lhs.data[i] * (j < rhs.data.size() ? rhs.data[j] : 0);
+            limb_t cur = data[i + j] + carry + lhs.data[i] * (j < rhs.data.size() ? rhs.data[j] : 0);
             data[i + j] = cur % BigUint::base;
             carry = cur / BigUint::base;
         }
@@ -204,9 +216,10 @@ BigUint operator-(const BigUint &lhs, const BigUint &rhs) {
 }
 
 std::ostream &operator<<(std::ostream &os, const BigUint &num) {
-    std::copy(num.data.rbegin(), num.data.rend(), std::ostream_iterator<uint>(os, ""));
+    std::copy(num.data.rbegin(), num.data.rend(), std::ostream_iterator<limb_t>(os, ""));
 }
 
 bool BigUint::isZero() const {
     return data.size() == 1 && data.front() == 0;
 }
+

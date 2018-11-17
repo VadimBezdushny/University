@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/BigInt/BigInt.h
+vector
+-
+string
+-
+algorithm
+-
+ostream
+-
+iterator
+-
+iostream
+-
+BigUint.h
+../src/BigInt/BigUint.h
+
+../src/BigInt/BigUint.h
+vector
+-
+string
+-
+
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.cc
+cmath
+-
+set
+-
+map
+-
+Algorithms.h
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.h
+
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.h
+map
+-
+BigInt/BigInt.h
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/BigInt/BigInt.h
+

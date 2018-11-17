@@ -8,18 +8,22 @@
 #include <vector>
 #include <string>
 
-typedef unsigned uint;
+typedef unsigned long long limb_t;
 using namespace std;
 class BigUint {
 public:
-    static const uint base = 10;
-    std::vector<uint> data;
+    static const limb_t base = 1'000'000'000;
+    static const limb_t base_len = 9;
+
+    std::vector<limb_t> data;
 
     BigUint() : BigUint(0) {}
 
     BigUint(const std::string &s);
 
     BigUint(int num) : BigUint(std::to_string(num)) {}
+
+    BigUint(limb_t num) : BigUint(std::to_string(num)) {}
 
     BigUint(long long num) : BigUint(std::to_string(num)) {}
 
@@ -28,8 +32,9 @@ public:
     void removeZeros();
 
     int len() const{
-        return data.size();
+        return data.size() * base_len;
     }
+
 
     std::string to_string() const;
     explicit operator int() const{

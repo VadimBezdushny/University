@@ -73,7 +73,7 @@ BigInt operator-(const BigInt &lhs, const BigInt &rhs) {
 }
 
 
-std::string BigInt::to_string() {
+std::string BigInt::to_string() const {
     std::string result;
     if (sign == -1) result += "-";
     result.append(mag.to_string());

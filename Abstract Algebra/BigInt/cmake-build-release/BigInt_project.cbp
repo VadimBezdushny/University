@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="BigInt_project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\Algorithms\;CMake Files\src\BigInt\;CMake Files\src\Console\;CMake Files\Tests\;CMake Files\Tests\lib\;CMake Files\Tests\lib\googletest\;CMake Files\Tests\lib\googletest\googlemock\;CMake Files\Tests\lib\googletest\googlemock\cmake\;CMake Files\Tests\lib\googletest\googletest\;CMake Files\Tests\lib\googletest\googletest\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BigInt_project_run">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/BigInt_project_run" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 BigInt_project_run"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BigInt_project_run/fast">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/BigInt_project_run" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 BigInt_project_run/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BigInt">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/BigInt/libBigInt.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/BigInt"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/BigInt/Makefile&quot;  VERBOSE=1 BigInt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/BigInt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/BigInt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/BigInt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BigInt/fast">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/BigInt/libBigInt.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/BigInt"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/BigInt/Makefile&quot;  VERBOSE=1 BigInt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/BigInt/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/BigInt/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/BigInt/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Algorithms">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms/libAlgorithms.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Algorithms/Makefile&quot;  VERBOSE=1 Algorithms"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Algorithms/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Algorithms/fast">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms/libAlgorithms.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Algorithms/Makefile&quot;  VERBOSE=1 Algorithms/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Algorithms/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Console">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Console/libConsole.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Console"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Console/Makefile&quot;  VERBOSE=1 Console"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Console/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Console/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Console/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Console/fast">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Console/libConsole.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Console"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Console/Makefile&quot;  VERBOSE=1 Console/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Console/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Console/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/src/Console/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runBigIntTests">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/runBigIntTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/Makefile&quot;  VERBOSE=1 runBigIntTests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="runBigIntTests/fast">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/runBigIntTests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/Makefile&quot;  VERBOSE=1 runBigIntTests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main/fast">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock/fast">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/heimdall/Dev/University/Abstract\ Algebra/BigInt/cmake-build-release/Tests/lib/googletest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/AlgoTests.cc">
+			<Option target="runBigIntTests"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/ArithmeticTests.cpp">
+			<Option target="runBigIntTests"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/InitTests.cpp">
+			<Option target="runBigIntTests"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/src/gmock-all.cc">
+			<Option target="gmock"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/src/gmock_main.cc">
+			<Option target="gmock_main"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/main.cpp">
+			<Option target="BigInt_project_run"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.cc">
+			<Option target="Algorithms"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.h">
+			<Option target="Algorithms"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigInt.cpp">
+			<Option target="BigInt"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigInt.h">
+			<Option target="BigInt"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigUint.cc">
+			<Option target="BigInt"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigUint.h">
+			<Option target="BigInt"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Console/Console.cc">
+			<Option target="BigInt_project_run"/>
+			<Option target="Console"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Console/Console.h">
+			<Option target="BigInt_project_run"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Algorithms\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\BigInt\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Console/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Console\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Tests\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Tests\lib\googletest\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Tests\lib\googletest\googlemock\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\Tests\lib\googletest\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\Tests\lib\googletest\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Tests\lib\googletest\googletest\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\Tests\lib\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\Tests\lib\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\Tests\lib\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/lib/googletest/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\Tests\lib\googletest\googletest\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

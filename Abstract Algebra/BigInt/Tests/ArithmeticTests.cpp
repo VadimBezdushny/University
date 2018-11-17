@@ -92,20 +92,20 @@ TEST(BigIntCompare, COMPARE_TEST_7){
     ASSERT_TRUE(BigInt(0) == BigInt(0));
 }
 
-TEST(BigIntShift, SHIFT_1){
-    BigInt num("123");
-    ASSERT_THAT(num<<=2, BigInt("12300"));
-}
-
-TEST(BigIntShift, SHIFT_2){
-    BigInt num("12345");
-    ASSERT_THAT(num>>=2, BigInt("123"));
-}
-
-TEST(BigIntShift, SHIFT_3){
-    BigInt num("123");
-    ASSERT_THAT(num>>=3, BigInt("0"));
-}
+//TEST(BigIntShift, SHIFT_1){
+//    BigInt num("123");
+//    ASSERT_THAT(num<<=2, BigInt("12300"));
+//}
+//
+//TEST(BigIntShift, SHIFT_2){
+//    BigInt num("12345");
+//    ASSERT_THAT(num>>=2, BigInt("123"));
+//}
+//
+//TEST(BigIntShift, SHIFT_3){
+//    BigInt num("123");
+//    ASSERT_THAT(num>>=3, BigInt("0"));
+//}
 
 TEST(BigIntDivMod, DIVMOD_1){
     ASSERT_THAT(BigInt(100)/BigInt(5), BigInt(100/5));

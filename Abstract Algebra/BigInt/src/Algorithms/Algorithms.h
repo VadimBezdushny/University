@@ -6,6 +6,7 @@
 #define BIGINT_PROJECT_ALGORITHMS_H
 
 
+#include <map>
 #include "BigInt/BigInt.h"
 
 
@@ -24,6 +25,7 @@ namespace Algo {
 
     BigInt divMod(BigInt lhs, BigInt rhs, BigInt mod);
 
+    BigInt _pollardRhoNextNum(BigInt num, BigInt step, BigInt mod);
 
     BigInt sqrt(BigInt num);
 
@@ -57,7 +59,7 @@ namespace Algo {
 
     BigInt pollardRhoIteration(BigInt num);
 
-    std::vector<std::pair<BigInt, int>> factorize(BigInt num, int max_dummy_div = 0);
+    std::map<BigInt, int> factorize(BigInt num, bool dummy = true);
 }
 
 
