@@ -28,16 +28,6 @@ iostream
 BigUint.h
 /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigUint.h
 
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigUint.cc
-algorithm
--
-iterator
--
-BigUint.h
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigUint.h
-iostream
--
-
 /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigUint.h
 vector
 -

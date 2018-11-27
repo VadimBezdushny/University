@@ -18,6 +18,10 @@ class BigInt{
     friend class BigIntTest;
 
 public:
+    static const BigInt ZERO;
+    static const BigInt ONE;
+
+
     int sign;
     BigUint mag;
 
@@ -76,6 +80,8 @@ public:
 
     friend bool operator!=(const BigInt &lhs, const BigInt &rhs);
 
+    BigInt& operator%=(BigInt rhs);
+
     BigInt &operator<<=(int size);
 
     BigInt &operator>>=(int size);
@@ -88,6 +94,5 @@ public:
     friend std::istream& operator>>(std::istream &is, BigInt &num);
     friend std::ostream& operator<<(std::ostream &os, const BigInt &num);
 };
-
 
 #endif //LABS_BIGINT_H

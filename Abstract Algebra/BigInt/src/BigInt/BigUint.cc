@@ -135,6 +135,40 @@ BigUint operator/(const BigUint &lhs, const BigUint &rhs) {
     return div;
 }
 
+
+
+BigUint &BigUint::operator%=(BigUint rhs) {
+    if(rhs == 0){
+        throw exception();
+    }
+    BigUint z = 1;
+    int k = 0;
+    while(*this >= rhs){
+        rhs <<= 1;
+        z <<= 1;
+        k++;
+    }
+
+    while(k > 0){
+        rhs >>= 1;
+        z >>= 1;
+        k--;
+
+        limb_t l = 0, r = BigUint::base, x = 0;
+        while(l <= r){
+            limb_t m = l + (r-l)/2;
+            if(*this >= rhs*m){
+                x = m;
+                l = m + 1;
+            }else{
+                r = m - 1;
+            }
+        }
+        *this = *this - rhs * x;
+    }
+    return *this;
+}
+
 BigUint operator%(const BigUint &lhs, const BigUint &rhs) {
     BigUint div, mod;
     divMod(lhs, rhs, div, mod);

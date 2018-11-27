@@ -142,29 +142,23 @@ namespace Algo{
     }
 
 
-
-    BigInt _pollardRhoNextNum(BigInt num, BigInt step, BigInt mod) {
-        return addMod(mulMod(num, num, mod), step, mod);
-    }
-
     BigInt pollardRhoIteration(BigInt num, BigInt step) {
         /*
-         * returns prime dividor of num
+         * returns dividor of num
          */
         BigInt div = 1, one = 1;
-        BigInt x_fixed = 2,  x = 2;
-        int cycle = 2;
-        while (div == 1) {
-            int count = 1;
-            while(count <= cycle && div <= one){
-                x = addMod(mulMod(x, x, num), step, num);
-                div = gcd(abs(x - x_fixed), num);
-                count++;
+        BigInt x_fixed = 1,  x = 2;
+        int cycle = 2, count = 0;
+        while (gcd(abs(x - x_fixed), num) == BigInt::ONE) {
+            if(count == cycle){
+                x_fixed = x;
+                cycle *= 2;
+                std::cout << cycle  << std::endl;
             }
-            cycle *= 2;
-            x_fixed = x;
+            x = normMod(x*x + step, num);
+            count++;
         }
-        return div;
+        return gcd(num, abs(x - x_fixed));
     }
 
     BigInt pollardRho(BigInt num) {
@@ -267,11 +261,12 @@ namespace Algo{
 
 
     BigInt gcd(BigInt a, BigInt b) {
-        while (b != 0) {
-            a = a % b;
-            swap(a, b);
-        }
-        return a;
+        while (a != BigInt::ZERO && b != BigInt::ZERO)
+            if(a >= b)
+                a %= b;
+            else
+                b %= a;
+        return a + b;
     }
 
     BigInt inverseMod(BigInt num, BigInt mod) {
@@ -325,10 +320,12 @@ namespace Algo{
     }
 
     BigInt normMod(BigInt num, BigInt mod) {
+        num %= mod;
         if(num >= 0){
-            return num % mod;
+            return num;
         }else{
-            return (num % mod + mod) % mod;
+            num = num + mod;
+            return num % mod;
         }
     }
 
@@ -337,14 +334,33 @@ namespace Algo{
     }
 
     BigInt subMod(BigInt lhs, BigInt rhs, BigInt mod) {
-        return normMod(normMod(lhs, mod) - normMod(rhs, mod), mod);
+        return normMod(lhs - rhs, mod);
     }
 
     BigInt mulMod(BigInt lhs, BigInt rhs, BigInt mod) {
-        return normMod(normMod(lhs, mod) * normMod(rhs, mod), mod);
+        return normMod(lhs * rhs, mod);
     }
 
     BigInt divMod(BigInt lhs, BigInt rhs, BigInt mod) {
         return normMod(normMod(lhs, mod) * inverseMod(normMod(rhs, mod), mod), mod);
     }
+
+    BigInt euler(BigInt num) {
+        std::map<BigInt, int> f = factorize(num);
+        for(auto it:f){
+            num = num - num / it.first;
+        }
+        return num;
+    }
+
+    int mobius(BigInt num) {
+        std::map<BigInt, int> f = factorize(num);
+        int res = (f.size() % 2 ? -1 : 1);
+        for(auto it:f){
+            if(it.second > 1)
+                res = 0;
+        }
+        return res;
+    }
+
 }

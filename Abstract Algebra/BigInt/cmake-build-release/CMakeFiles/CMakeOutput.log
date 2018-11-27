@@ -1,4 +1,4 @@
-The system is: Linux - 4.15.0-36-generic - x86_64
+The system is: Linux - 4.15.0-39-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/heimdall/Dev/University/
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0df91/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0df91.dir/build.make CMakeFiles/cmTC_0df91.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_305dd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_305dd.dir/build.make CMakeFiles/cmTC_305dd.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0df91.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_0df91.dir/testCCompiler.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp/testCCompiler.c"
-Linking C executable cmTC_0df91
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0df91.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_0df91.dir/testCCompiler.c.o  -o cmTC_0df91 
+Building C object CMakeFiles/cmTC_305dd.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_305dd.dir/testCCompiler.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp/testCCompiler.c"
+Linking C executable cmTC_305dd
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_305dd.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_305dd.dir/testCCompiler.c.o  -o cmTC_305dd 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ae9db/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ae9db.dir/build.make CMakeFiles/cmTC_ae9db.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_cc220/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cc220.dir/build.make CMakeFiles/cmTC_cc220.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ae9db.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_ae9db.dir/CMakeCCompilerABI.c.o   -c /home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_ae9db
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae9db.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_ae9db.dir/CMakeCCompilerABI.c.o  -o cmTC_ae9db 
+Building C object CMakeFiles/cmTC_cc220.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_cc220.dir/CMakeCCompilerABI.c.o   -c /home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_cc220
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc220.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_cc220.dir/CMakeCCompilerABI.c.o  -o cmTC_cc220 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ae9db' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb2lfjl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ae9db /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ae9db.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ae9db' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cc220' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXEpNMX.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_cc220 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_cc220.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cc220' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ae9db/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ae9db.dir/build.make CMakeFiles/cmTC_ae9db.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_cc220/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_cc220.dir/build.make CMakeFiles/cmTC_cc220.dir/build]
   ignore line: [make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_ae9db.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_ae9db.dir/CMakeCCompilerABI.c.o   -c /home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_ae9db]
-  ignore line: [/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae9db.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_ae9db.dir/CMakeCCompilerABI.c.o  -o cmTC_ae9db ]
+  ignore line: [Building C object CMakeFiles/cmTC_cc220.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_cc220.dir/CMakeCCompilerABI.c.o   -c /home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_cc220]
+  ignore line: [/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc220.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_cc220.dir/CMakeCCompilerABI.c.o  -o cmTC_cc220 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ae9db' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb2lfjl.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ae9db /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ae9db.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cc220' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXEpNMX.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_cc220 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_cc220.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccb2lfjl.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccXEpNMX.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_ae9db] ==> ignore
+    arg [cmTC_cc220] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_ae9db.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_cc220.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -159,14 +159,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9cac0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9cac0.dir/build.make CMakeFiles/cmTC_9cac0.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7dd9e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7dd9e.dir/build.make CMakeFiles/cmTC_7dd9e.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9cac0.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_9cac0.dir/feature_tests.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.c"
-Linking C executable cmTC_9cac0
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9cac0.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_9cac0.dir/feature_tests.c.o  -o cmTC_9cac0 
+Building C object CMakeFiles/cmTC_7dd9e.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_7dd9e.dir/feature_tests.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.c"
+Linking C executable cmTC_7dd9e
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7dd9e.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_7dd9e.dir/feature_tests.c.o  -o cmTC_7dd9e 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
@@ -179,14 +179,14 @@ make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigIn
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b2290/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b2290.dir/build.make CMakeFiles/cmTC_b2290.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b2cd5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b2cd5.dir/build.make CMakeFiles/cmTC_b2cd5.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b2290.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_b2290.dir/feature_tests.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.c"
-Linking C executable cmTC_b2290
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2290.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_b2290.dir/feature_tests.c.o  -o cmTC_b2290 
+Building C object CMakeFiles/cmTC_b2cd5.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_b2cd5.dir/feature_tests.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.c"
+Linking C executable cmTC_b2cd5
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2cd5.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_b2cd5.dir/feature_tests.c.o  -o cmTC_b2cd5 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
@@ -199,14 +199,14 @@ make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigIn
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e8a37/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e8a37.dir/build.make CMakeFiles/cmTC_e8a37.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1264c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1264c.dir/build.make CMakeFiles/cmTC_1264c.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e8a37.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_e8a37.dir/feature_tests.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.c"
-Linking C executable cmTC_e8a37
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8a37.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_e8a37.dir/feature_tests.c.o  -o cmTC_e8a37 
+Building C object CMakeFiles/cmTC_1264c.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_1264c.dir/feature_tests.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.c"
+Linking C executable cmTC_1264c
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1264c.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_1264c.dir/feature_tests.c.o  -o cmTC_1264c 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
@@ -217,28 +217,28 @@ make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigIn
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_72dd3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_72dd3.dir/build.make CMakeFiles/cmTC_72dd3.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f3af8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f3af8.dir/build.make CMakeFiles/cmTC_f3af8.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_72dd3.dir/testCXXCompiler.cxx.o
-/usr/bin/c++    -std=gnu++1z -o CMakeFiles/cmTC_72dd3.dir/testCXXCompiler.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp/testCXXCompiler.cxx"
-Linking CXX executable cmTC_72dd3
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72dd3.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_72dd3.dir/testCXXCompiler.cxx.o  -o cmTC_72dd3 
+Building CXX object CMakeFiles/cmTC_f3af8.dir/testCXXCompiler.cxx.o
+/usr/bin/c++    -std=gnu++1z -o CMakeFiles/cmTC_f3af8.dir/testCXXCompiler.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp/testCXXCompiler.cxx"
+Linking CXX executable cmTC_f3af8
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3af8.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_f3af8.dir/testCXXCompiler.cxx.o  -o cmTC_f3af8 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_89e62/fast"
-/usr/bin/make -f CMakeFiles/cmTC_89e62.dir/build.make CMakeFiles/cmTC_89e62.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_eb1d9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eb1d9.dir/build.make CMakeFiles/cmTC_eb1d9.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_89e62.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++    -std=gnu++1z -o CMakeFiles/cmTC_89e62.dir/CMakeCXXCompilerABI.cpp.o -c /home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_89e62
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89e62.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_89e62.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_89e62 
+Building CXX object CMakeFiles/cmTC_eb1d9.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++    -std=gnu++1z -o CMakeFiles/cmTC_eb1d9.dir/CMakeCXXCompilerABI.cpp.o -c /home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_eb1d9
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb1d9.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_eb1d9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_eb1d9 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -250,9 +250,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_89e62' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVXK9JT.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_89e62 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_89e62.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_89e62' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb1d9' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cccG4rAX.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_eb1d9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_eb1d9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb1d9' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
@@ -260,14 +260,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_89e62/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_89e62.dir/build.make CMakeFiles/cmTC_89e62.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_eb1d9/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_eb1d9.dir/build.make CMakeFiles/cmTC_eb1d9.dir/build]
   ignore line: [make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_89e62.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++    -std=gnu++1z -o CMakeFiles/cmTC_89e62.dir/CMakeCXXCompilerABI.cpp.o -c /home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_89e62]
-  ignore line: [/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89e62.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_89e62.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_89e62 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_eb1d9.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++    -std=gnu++1z -o CMakeFiles/cmTC_eb1d9.dir/CMakeCXXCompilerABI.cpp.o -c /home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/share/cmake-3.12/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_eb1d9]
+  ignore line: [/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb1d9.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_eb1d9.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_eb1d9 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -279,13 +279,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_89e62' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVXK9JT.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_89e62 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_89e62.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb1d9' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cccG4rAX.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_eb1d9 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_eb1d9.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccVXK9JT.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cccG4rAX.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_89e62] ==> ignore
+    arg [cmTC_eb1d9] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -316,7 +316,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_89e62.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_eb1d9.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -344,14 +344,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_97c7b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_97c7b.dir/build.make CMakeFiles/cmTC_97c7b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e8bf3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e8bf3.dir/build.make CMakeFiles/cmTC_e8bf3.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_97c7b.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -std=gnu++1z -o CMakeFiles/cmTC_97c7b.dir/feature_tests.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_97c7b
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97c7b.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_97c7b.dir/feature_tests.cxx.o  -o cmTC_97c7b 
+Building CXX object CMakeFiles/cmTC_e8bf3.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -std=gnu++1z -o CMakeFiles/cmTC_e8bf3.dir/feature_tests.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.cxx"
+Linking CXX executable cmTC_e8bf3
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8bf3.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_e8bf3.dir/feature_tests.cxx.o  -o cmTC_e8bf3 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
@@ -417,14 +417,14 @@ make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigIn
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_555b6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_555b6.dir/build.make CMakeFiles/cmTC_555b6.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4ce35/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4ce35.dir/build.make CMakeFiles/cmTC_4ce35.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_555b6.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -std=gnu++1z -o CMakeFiles/cmTC_555b6.dir/feature_tests.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_555b6
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_555b6.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_555b6.dir/feature_tests.cxx.o  -o cmTC_555b6 
+Building CXX object CMakeFiles/cmTC_4ce35.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -std=gnu++1z -o CMakeFiles/cmTC_4ce35.dir/feature_tests.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.cxx"
+Linking CXX executable cmTC_4ce35
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ce35.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_4ce35.dir/feature_tests.cxx.o  -o cmTC_4ce35 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
@@ -490,14 +490,14 @@ make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigIn
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1d69d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1d69d.dir/build.make CMakeFiles/cmTC_1d69d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_94ce2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_94ce2.dir/build.make CMakeFiles/cmTC_94ce2.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1d69d.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -std=gnu++1z -o CMakeFiles/cmTC_1d69d.dir/feature_tests.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_1d69d
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d69d.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_1d69d.dir/feature_tests.cxx.o  -o cmTC_1d69d 
+Building CXX object CMakeFiles/cmTC_94ce2.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -std=gnu++1z -o CMakeFiles/cmTC_94ce2.dir/feature_tests.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.cxx"
+Linking CXX executable cmTC_94ce2
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94ce2.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_94ce2.dir/feature_tests.cxx.o  -o cmTC_94ce2 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
@@ -563,14 +563,14 @@ make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigIn
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f497e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f497e.dir/build.make CMakeFiles/cmTC_f497e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c2976/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c2976.dir/build.make CMakeFiles/cmTC_c2976.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f497e.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -std=gnu++1z -o CMakeFiles/cmTC_f497e.dir/feature_tests.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_f497e
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f497e.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_f497e.dir/feature_tests.cxx.o  -o cmTC_f497e 
+Building CXX object CMakeFiles/cmTC_c2976.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -std=gnu++1z -o CMakeFiles/cmTC_c2976.dir/feature_tests.cxx.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/feature_tests.cxx"
+Linking CXX executable cmTC_c2976
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2976.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_c2976.dir/feature_tests.cxx.o  -o cmTC_c2976 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 
@@ -634,14 +634,14 @@ make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigIn
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_699ac/fast"
-/usr/bin/make -f CMakeFiles/cmTC_699ac.dir/build.make CMakeFiles/cmTC_699ac.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_826e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_826e2.dir/build.make CMakeFiles/cmTC_826e2.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_699ac.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_699ac.dir/CheckIncludeFile.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c"
-Linking C executable cmTC_699ac
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_699ac.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_699ac.dir/CheckIncludeFile.c.o  -o cmTC_699ac 
+Building C object CMakeFiles/cmTC_826e2.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_826e2.dir/CheckIncludeFile.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp/CheckIncludeFile.c"
+Linking C executable cmTC_826e2
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_826e2.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_826e2.dir/CheckIncludeFile.c.o  -o cmTC_826e2 
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
 
 

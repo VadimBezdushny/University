@@ -510,11 +510,3 @@ Algorithms/Algorithms.h
 BigInt/BigInt.h
 /home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/BigInt/BigInt.h
 
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/InitTests.cpp
-gtest/gtest.h
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/gtest/gtest.h
-gmock/gmock.h
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/gmock/gmock.h
-BigInt/BigInt.h
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/Tests/BigInt/BigInt.h
-

@@ -25,8 +25,6 @@ namespace Algo {
 
     BigInt divMod(BigInt lhs, BigInt rhs, BigInt mod);
 
-    BigInt _pollardRhoNextNum(BigInt num, BigInt step, BigInt mod);
-
     BigInt sqrt(BigInt num);
 
     BigInt pow(BigInt base, BigInt power);
@@ -60,6 +58,10 @@ namespace Algo {
     BigInt pollardRhoIteration(BigInt num);
 
     std::map<BigInt, int> factorize(BigInt num, bool dummy = true);
+
+    BigInt euler(BigInt num);
+
+    int mobius(BigInt num);
 }
 
 

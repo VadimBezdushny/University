@@ -58,6 +58,8 @@ public:
 
     friend BigUint operator%(const BigUint &lhs, const BigUint &rhs);
 
+    BigUint& operator%=(BigUint rhs);
+
     friend bool operator==(const BigUint &lhs, const BigUint &rhs);
 
     friend bool operator<(const BigUint &lhs, const BigUint &rhs);

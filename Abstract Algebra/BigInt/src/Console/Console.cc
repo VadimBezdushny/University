@@ -38,6 +38,10 @@ void Console::run() {
     std::cout << BOLD(FMAG("sqrt")) << " operand\n";
     std::cout << BOLD(FMAG("chineese")) << " n   a_1 p_1   a_2 p_2   ...   a_n p_n\n";
     while(true){
+        BigInt num = BigInt("38696309") * BigInt("65039389"), res = 1;
+        map<BigInt, int> f = Algo::factorize(num);
+
+
         std::cout << ">";
 
         std::string keyword;

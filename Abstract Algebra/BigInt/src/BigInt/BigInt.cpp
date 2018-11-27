@@ -5,6 +5,10 @@
 #include <cassert>
 #include "BigInt.h"
 
+const BigInt BigInt::ZERO("0");
+const BigInt BigInt::ONE("1");
+
+
 BigInt::BigInt(const std::string &s) {
     sign = 1;
     if (s.empty())
@@ -161,6 +165,13 @@ std::istream &operator>>(std::istream &is, BigInt &num) {
     std::string s;
     std::cin >> s;
     num = BigInt(s);
+}
+
+BigInt &BigInt::operator%=(BigInt rhs) {
+    if(*this <= 0 || rhs <= 0)
+        *this  = *this % rhs;
+    this->mag %= rhs.mag;
+    return *this;
 }
 /*
 
