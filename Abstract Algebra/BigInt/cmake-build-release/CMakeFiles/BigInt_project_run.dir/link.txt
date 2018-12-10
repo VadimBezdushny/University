@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/BigInt_project_run.dir/main.cpp.o  -o BigInt_project_run src/libBigInt.a 

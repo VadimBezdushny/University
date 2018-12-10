@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/runBigIntTests.dir/InitTests.cpp.o CMakeFiles/runBigIntTests.dir/ArithmeticTests.cpp.o  -o runBigIntTests ../src/libBigInt.a ../lib/libgtest.a ../lib/libgtest_main.a ../lib/libgtest.a -pthread 
