@@ -7,6 +7,9 @@
 #include "BigUint.h"
 #include <iostream>
 
+const BigUint BigUint::ZERO("0");
+const BigUint BigUint::ONE("1");
+
 BigUint::BigUint(const std::string &s) {
     string temp(base_len, '0');
     for (auto ch:s)
@@ -29,10 +32,11 @@ void BigUint::removeZeros() {
 
 std::string BigUint::to_string() const {
     std::string result;
-    for (auto it = data.rbegin(); it != data.rend(); it++) {
-        std::string limb = std::to_string(*it);
+    for(int i = 0; i + 1 < data.size(); i++) {
+        std::string limb = std::to_string(data[i]);
         result.append(std::string(base_len - limb.length(), '0').append(limb));
     }
+    result.append(std::to_string(data.back()));
     return result;
 }
 
@@ -138,7 +142,7 @@ BigUint operator/(const BigUint &lhs, const BigUint &rhs) {
 
 
 BigUint &BigUint::operator%=(BigUint rhs) {
-    if(rhs == 0){
+    if(rhs.isZero()){
         throw exception();
     }
     BigUint z = 1;
@@ -175,57 +179,14 @@ BigUint operator%(const BigUint &lhs, const BigUint &rhs) {
     return mod;
 }
 
-void BigUint::add(const BigUint &lhs, const BigUint &rhs) {
-    data.resize(std::max(lhs.data.size(), rhs.data.size()) + 1);
-    auto lhs_iter = lhs.data.begin(), rhs_iter = rhs.data.begin();
-    limb_t carry = 0;
-    size_t tail = 0;
-    while (carry > 0 || lhs_iter != lhs.data.end() || rhs_iter != rhs.data.end()) {
-        limb_t digit_sum = (lhs_iter != lhs.data.end() ? *lhs_iter : 0) +
-                         (rhs_iter != rhs.data.end() ? *rhs_iter : 0) +
-                         carry;
-
-        data[tail++] = digit_sum % BigUint::base;
-        carry = digit_sum / BigUint::base;
-
-        if (lhs_iter != lhs.data.end())lhs_iter++;
-        if (rhs_iter != rhs.data.end())rhs_iter++;
-    }
-    removeZeros();
-}
-
-void BigUint::substract(const BigUint &lhs, const BigUint &rhs) {
-    if (lhs < rhs) {
-        BigUint(0);
-    }
-    data.clear();
-    auto lhs_iter = lhs.data.begin(), rhs_iter = rhs.data.begin();
-    limb_t need = 0;
-    while (lhs_iter != lhs.data.end()) {
-        auto rhs_digit = (rhs_iter != rhs.data.end() ? *rhs_iter : 0);
-
-        limb_t next_need = static_cast<limb_t>(*lhs_iter < rhs_digit + need);
-        limb_t next_digit = BigUint::base * next_need + *lhs_iter - rhs_digit - need;
-        data.push_back(next_digit);
-
-        need = next_need;
-
-        lhs_iter++;
-        if (rhs_iter != rhs.data.end()) {
-            rhs_iter++;
-        }
-    }
-    removeZeros();
-}
-
 void BigUint::multiply(const BigUint &lhs, const BigUint &rhs) {
     data.resize(lhs.data.size() + rhs.data.size());
     for (std::size_t i = 0; i < lhs.data.size(); i++) {
         limb_t carry = 0;
         for (std::size_t j = 0; carry || j < rhs.data.size(); j++) {
-            limb_t cur = data[i + j] + carry + lhs.data[i] * (j < rhs.data.size() ? rhs.data[j] : 0);
-            data[i + j] = cur % BigUint::base;
-            carry = cur / BigUint::base;
+            limb_ll cur = data[i + j] + carry + limb_ll(lhs.data[i]) * (j < rhs.data.size() ? rhs.data[j] : 0);
+            data[i + j] = limb_t (cur % BigUint::base);
+            carry = limb_t(cur / BigUint::base);
         }
     }
     removeZeros();
@@ -238,22 +199,39 @@ BigUint operator*(const BigUint &lhs, const BigUint &rhs) {
 }
 
 BigUint operator+(const BigUint &lhs, const BigUint &rhs) {
-    BigUint ans;
-    ans.add(lhs, rhs);
+    BigUint ans(lhs);
+    int carry = 0;
+    for (size_t i=0; i<max(ans.data.size(),rhs.data.size()) || carry; ++i) {
+        if (i == ans.data.size())
+            ans.data.push_back (0);
+        ans.data[i] += carry + (i < rhs.data.size() ? rhs.data[i] : 0);
+        carry = ans.data[i] >= BigUint::base;
+        if (carry)
+            ans.data[i] -= BigUint::base;
+    }
     return ans;
 }
 
 BigUint operator-(const BigUint &lhs, const BigUint &rhs) {
-    BigUint ans;
-    ans.substract(lhs, rhs);
+    BigUint ans(lhs);
+    limb_t carry = 0;
+    for (size_t i=0, sz = rhs.data.size(); i<sz || carry; ++i) {
+        ans.data[i] += BigUint::base;
+        ans.data[i] -= carry + (i < sz ? rhs.data[i] : 0);
+        carry = ans.data[i] < BigUint::base;
+        if (!carry)
+            ans.data[i] -= BigUint::base;
+    }
+    ans.removeZeros();
     return ans;
 }
 
 std::ostream &operator<<(std::ostream &os, const BigUint &num) {
-    std::copy(num.data.rbegin(), num.data.rend(), std::ostream_iterator<limb_t>(os, ""));
+    std::copy(num.data.rbegin(), num.data.rend(), std::ostream_iterator<limb_t>(os, "*"));
 }
 
 bool BigUint::isZero() const {
     return data.size() == 1 && data.front() == 0;
 }
+
 

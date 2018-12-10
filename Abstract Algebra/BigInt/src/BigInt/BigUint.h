@@ -8,10 +8,15 @@
 #include <vector>
 #include <string>
 
-typedef unsigned long long limb_t;
+typedef unsigned limb_t;
+typedef unsigned long long limb_ll;
+
 using namespace std;
 class BigUint {
 public:
+    static const BigUint ZERO;
+    static const BigUint ONE;
+
     static const limb_t base = 1'000'000'000;
     static const limb_t base_len = 9;
 
@@ -42,8 +47,6 @@ public:
     }
 
 public:
-    void add(const BigUint &lhs, const BigUint &rhs);
-    void substract(const BigUint &lhs, const BigUint &rhs);
     void multiply(const BigUint &lhs, const BigUint &rhs);
 
     int compareTo(const BigUint &other) const;

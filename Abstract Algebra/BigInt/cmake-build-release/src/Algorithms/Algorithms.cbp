@@ -72,6 +72,15 @@
 		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.h">
 			<Option target="Algorithms"/>
 		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurve.h">
+			<Option target="Algorithms"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurveNumber.cc">
+			<Option target="Algorithms"/>
+		</Unit>
+		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurveNumber.h">
+			<Option target="Algorithms"/>
+		</Unit>
 		<Unit filename="/home/heimdall/Dev/University/Abstract Algebra/BigInt/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

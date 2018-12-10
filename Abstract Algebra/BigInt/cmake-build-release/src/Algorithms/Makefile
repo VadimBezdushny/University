@@ -198,6 +198,33 @@ Algorithms.cc.s:
 	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release" && $(MAKE) -f src/Algorithms/CMakeFiles/Algorithms.dir/build.make src/Algorithms/CMakeFiles/Algorithms.dir/Algorithms.cc.s
 .PHONY : Algorithms.cc.s
 
+ElipticCurveNumber.o: ElipticCurveNumber.cc.o
+
+.PHONY : ElipticCurveNumber.o
+
+# target to build an object file
+ElipticCurveNumber.cc.o:
+	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release" && $(MAKE) -f src/Algorithms/CMakeFiles/Algorithms.dir/build.make src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o
+.PHONY : ElipticCurveNumber.cc.o
+
+ElipticCurveNumber.i: ElipticCurveNumber.cc.i
+
+.PHONY : ElipticCurveNumber.i
+
+# target to preprocess a source file
+ElipticCurveNumber.cc.i:
+	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release" && $(MAKE) -f src/Algorithms/CMakeFiles/Algorithms.dir/build.make src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.i
+.PHONY : ElipticCurveNumber.cc.i
+
+ElipticCurveNumber.s: ElipticCurveNumber.cc.s
+
+.PHONY : ElipticCurveNumber.s
+
+# target to generate assembly for a file
+ElipticCurveNumber.cc.s:
+	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release" && $(MAKE) -f src/Algorithms/CMakeFiles/Algorithms.dir/build.make src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.s
+.PHONY : ElipticCurveNumber.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -214,6 +241,9 @@ help:
 	@echo "... Algorithms.o"
 	@echo "... Algorithms.i"
 	@echo "... Algorithms.s"
+	@echo "... ElipticCurveNumber.o"
+	@echo "... ElipticCurveNumber.i"
+	@echo "... ElipticCurveNumber.s"
 .PHONY : help
 
 

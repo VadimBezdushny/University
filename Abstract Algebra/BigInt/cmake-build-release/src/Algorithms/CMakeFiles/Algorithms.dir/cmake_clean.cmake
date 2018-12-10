@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Algorithms.dir/Algorithms.cc.o"
+  "CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o"
   "libAlgorithms.pdb"
   "libAlgorithms.a"
 )

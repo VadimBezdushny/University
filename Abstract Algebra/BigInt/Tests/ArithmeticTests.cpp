@@ -48,6 +48,13 @@ TEST(BigIntAdd, ADD_TEST_6){
             BigInt("1689"));
 }
 
+TEST(BigIntAdd, 7){
+    ASSERT_THAT(
+            BigInt("-143646346347342") +
+            BigInt("183253463574611"),
+            BigInt("39607117227269"));
+}
+
 TEST(BigIntAdd, ADD_TEST_7){
     for(int i = -10; i <= 10; i++){
         for(int j = -10; j <= 10; j++){

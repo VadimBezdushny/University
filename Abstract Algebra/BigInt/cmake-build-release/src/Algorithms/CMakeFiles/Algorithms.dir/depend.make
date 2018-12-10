@@ -6,3 +6,10 @@ src/Algorithms/CMakeFiles/Algorithms.dir/Algorithms.cc.o: ../src/BigInt/BigUint.
 src/Algorithms/CMakeFiles/Algorithms.dir/Algorithms.cc.o: ../src/Algorithms/Algorithms.cc
 src/Algorithms/CMakeFiles/Algorithms.dir/Algorithms.cc.o: ../src/Algorithms/Algorithms.h
 
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o: ../src/BigInt/BigInt.h
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o: ../src/BigInt/BigUint.h
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o: ../src/Algorithms/Algorithms.h
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o: ../src/Algorithms/ElipticCurve.h
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o: ../src/Algorithms/ElipticCurveNumber.cc
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o: ../src/Algorithms/ElipticCurveNumber.h
+

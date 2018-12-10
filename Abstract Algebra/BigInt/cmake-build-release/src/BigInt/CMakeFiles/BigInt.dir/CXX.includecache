@@ -6,27 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigInt.cpp
-cassert
--
-BigInt.h
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigInt.h
-
-/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigInt.h
-vector
--
-string
--
+/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigUint.cc
 algorithm
--
-ostream
 -
 iterator
 -
-iostream
--
 BigUint.h
 /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigUint.h
+iostream
+-
 
 /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/BigInt/BigUint.h
 vector

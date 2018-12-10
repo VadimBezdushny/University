@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.cc" "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms/CMakeFiles/Algorithms.dir/Algorithms.cc.o"
+  "/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurveNumber.cc" "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

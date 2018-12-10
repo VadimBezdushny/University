@@ -6,3 +6,10 @@ src/Algorithms/CMakeFiles/Algorithms.dir/Algorithms.cc.o
  ../src/BigInt/BigUint.h
  /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.cc
  /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.h
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o
+ ../src/BigInt/BigInt.h
+ ../src/BigInt/BigUint.h
+ /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.h
+ /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurve.h
+ /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurveNumber.cc
+ /home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurveNumber.h

@@ -47,9 +47,8 @@ int BigInt::compareTo(const BigInt &other) const{
 
 void BigInt::addOrSub(const BigInt &lhs, const BigInt &rhs, bool substract) {
     // if substract == true we subtract data
-
     if ((lhs.sign == rhs.sign) ^ substract) {
-        mag.add(lhs.mag, rhs.mag);
+        mag = lhs.mag + rhs.mag;
         setSign(lhs.sign);
         return;
     }
@@ -58,9 +57,9 @@ void BigInt::addOrSub(const BigInt &lhs, const BigInt &rhs, bool substract) {
     int new_rhs_sign = (substract ? rhs.sign : -rhs.sign);
     int cmp_value = lhs.mag.compareTo(rhs.mag);
     if(cmp_value == 1)
-        mag.substract(lhs.mag, rhs.mag);
+        mag = lhs.mag - rhs.mag;
     else
-        mag.substract(rhs.mag, lhs.mag);
+        mag = rhs.mag - lhs.mag;
     setSign(cmp_value * new_rhs_sign);
 }
 
@@ -167,41 +166,9 @@ std::istream &operator>>(std::istream &is, BigInt &num) {
     num = BigInt(s);
 }
 
-BigInt &BigInt::operator%=(BigInt rhs) {
-    if(*this <= 0 || rhs <= 0)
+BigInt &BigInt::operator%=(const BigInt &rhs) {
+    if(*this <= BigInt::ZERO || rhs <= BigInt::ZERO)
         *this  = *this % rhs;
     this->mag %= rhs.mag;
     return *this;
 }
-/*
-
-BigInt BigInt::sqrt() {
-    if(*this < 0) throw;
-    if(*this == 0) return BigInt(0);
-
-    BigInt curr = BigInt(1), next;
-    curr <<= (this->data.size() + 1/2);
-    int k = 0;
-    while(true){
-        next = (curr + *this/curr) / 2;
-        if(next >= curr){
-            return curr;
-        }
-        curr = next;
-    }
-}
-
-BigInt pow(BigInt base, BigInt power) {
-    BigInt res = 1;
-    while(power > 0){
-        if(power % 2 == 1){
-            res = res * base;
-        }
-        base = base * base;
-        power = power / 2;
-    }
-    return res;
-}
-
-*/
-

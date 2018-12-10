@@ -38,10 +38,6 @@ void Console::run() {
     std::cout << BOLD(FMAG("sqrt")) << " operand\n";
     std::cout << BOLD(FMAG("chineese")) << " n   a_1 p_1   a_2 p_2   ...   a_n p_n\n";
     while(true){
-        BigInt num = BigInt("38696309") * BigInt("65039389"), res = 1;
-        map<BigInt, int> f = Algo::factorize(num);
-
-
         std::cout << ">";
 
         std::string keyword;
@@ -51,21 +47,67 @@ void Console::run() {
         std::set<std::string> mod_binary = {"%+","%-", "%*", "%/", "%%", "%^"};
         try{
         if(keyword == "q") break;
-        else if(keyword == "sqrt"){
+        else if(keyword == "sqrt") {
             std::string s;
             std::cin >> s;
             BigInt lhs(s);
             std::cout << Algo::sqrt(lhs);
             std::cout << std::endl;
-        }else if(keyword == "chineese"){
+        }else if(keyword == "euler") {
+            std::string s;
+            std::cin >> s;
+            BigInt lhs(s);
+            std::cout << Algo::euler(lhs) << std::endl;
+        }else if(keyword == "mobius"){
+            std::string s;
+            std::cin >> s;
+            BigInt lhs(s);
+            std::cout << Algo::mobius(lhs) << std::endl;
+        }else if(keyword == "logMod"){
+            std::string s_base, s_ans, s_mod;
+            std::cin >> s_base >> s_ans >> s_mod;
+            BigInt base(s_base), ans(s_ans), mod(s_mod);
+            std::cout << Algo::logMod(base, ans, mod) << std::endl;
+        }else if(keyword == "lejandre"){
+            std::string s, p;
+            std::cin >> s >> p;
+            BigInt num(s), qwe(p);
+            std::cout << Algo::legendre_symbol(num, qwe) << std::endl;
+        }else if(keyword == "lejandre"){
+            std::string s, p;
+            std::cin >> s >> p;
+            BigInt num(s), qwe(p);
+            std::cout << Algo::legendre_symbol(num, qwe) << std::endl;
+        }else if(keyword == "prime"){
+            std::string p;
+            std::cin >> p;
+            BigInt num(p);
+            std::cout << Algo::isPrime(num) << std::endl;
+        }else if(keyword == "factorise"){
+            std::string p;
+            std::cin >> p;
+            BigInt num(p);
+            auto v =  Algo::factorize(num);
+            bool not_first = false;
+            for(auto it:v){
+                if(not_first)
+                    std::cout << "+";
+                not_first = true;
+                cout << it.first;
+                if(it.second > 1){
+                    cout << "^" << it.second;
+                }
+            }
+            cout << std::endl;
+        }else if(keyword == "chineese") {
             int n;
             std::cin >> n;
             std::cout << std::endl << "Enter constraints" << std::endl;
             vector<pair<BigInt, BigInt>> v;
-            for(int i = 0; i < n; i++){
+            for (int i = 0; i < n; i++) {
                 BigInt x, y;
                 std::cin >> x >> y;
-                v.push_back({x,y});
+                v.push_back({x, y});
             }
             BigInt res = Algo::chineese(v);
             std::cout << res << std::endl;

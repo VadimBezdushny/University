@@ -239,14 +239,16 @@ namespace Algo{
                 }
             }
         }
-        if(isPrime(num)) {
-            ans[num] = ans[num] + 1;
-        }else{
-            BigInt div = pollardRho(num);
-            auto res1 = factorize(div, false);
-            auto res2 = factorize(num/div, false);
-            for(auto it:res1) ans[it.first] = ans[it.first] + it.second;
-            for(auto it:res2) ans[it.first] = ans[it.first] + it.second;
+        if(num != 1) {
+            if (isPrime(num)) {
+                ans[num] = ans[num] + 1;
+            } else {
+                BigInt div = pollardRho(num);
+                auto res1 = factorize(div, false);
+                auto res2 = factorize(num / div, false);
+                for (auto it:res1) ans[it.first] = ans[it.first] + it.second;
+                for (auto it:res2) ans[it.first] = ans[it.first] + it.second;
+            }
         }
         return ans;
     }

@@ -80,7 +80,7 @@ public:
 
     friend bool operator!=(const BigInt &lhs, const BigInt &rhs);
 
-    BigInt& operator%=(BigInt rhs);
+    BigInt& operator%=(const BigInt &rhs);
 
     BigInt &operator<<=(int size);
 

@@ -1,2 +1,2 @@
-/usr/bin/ar qc libAlgorithms.a  CMakeFiles/Algorithms.dir/Algorithms.cc.o
+/usr/bin/ar qc libAlgorithms.a  CMakeFiles/Algorithms.dir/Algorithms.cc.o CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o
 /usr/bin/ranlib libAlgorithms.a

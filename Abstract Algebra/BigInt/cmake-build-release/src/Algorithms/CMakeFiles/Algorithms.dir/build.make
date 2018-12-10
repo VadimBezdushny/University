@@ -70,17 +70,32 @@ src/Algorithms/CMakeFiles/Algorithms.dir/Algorithms.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/Algorithms.cc.s"
 	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/Algorithms.cc" -o CMakeFiles/Algorithms.dir/Algorithms.cc.s
 
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o: src/Algorithms/CMakeFiles/Algorithms.dir/flags.make
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o: ../src/Algorithms/ElipticCurveNumber.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o"
+	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurveNumber.cc"
+
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.i"
+	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurveNumber.cc" > CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.i
+
+src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.s"
+	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/heimdall/Dev/University/Abstract Algebra/BigInt/src/Algorithms/ElipticCurveNumber.cc" -o CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.s
+
 # Object files for target Algorithms
 Algorithms_OBJECTS = \
-"CMakeFiles/Algorithms.dir/Algorithms.cc.o"
+"CMakeFiles/Algorithms.dir/Algorithms.cc.o" \
+"CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o"
 
 # External object files for target Algorithms
 Algorithms_EXTERNAL_OBJECTS =
 
 src/Algorithms/libAlgorithms.a: src/Algorithms/CMakeFiles/Algorithms.dir/Algorithms.cc.o
+src/Algorithms/libAlgorithms.a: src/Algorithms/CMakeFiles/Algorithms.dir/ElipticCurveNumber.cc.o
 src/Algorithms/libAlgorithms.a: src/Algorithms/CMakeFiles/Algorithms.dir/build.make
 src/Algorithms/libAlgorithms.a: src/Algorithms/CMakeFiles/Algorithms.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libAlgorithms.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libAlgorithms.a"
 	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms" && $(CMAKE_COMMAND) -P CMakeFiles/Algorithms.dir/cmake_clean_target.cmake
 	cd "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/src/Algorithms" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Algorithms.dir/link.txt --verbose=$(VERBOSE)
 

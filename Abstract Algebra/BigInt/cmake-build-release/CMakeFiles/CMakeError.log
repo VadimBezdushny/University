@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7937a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7937a.dir/build.make CMakeFiles/cmTC_7937a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2823c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2823c.dir/build.make CMakeFiles/cmTC_2823c.dir/build
 make[1]: Entering directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7937a.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_7937a.dir/CheckSymbolExists.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
-Linking C executable cmTC_7937a
-/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7937a.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7937a.dir/CheckSymbolExists.c.o  -o cmTC_7937a 
-CMakeFiles/cmTC_7937a.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_2823c.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_2823c.dir/CheckSymbolExists.c.o   -c "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
+Linking C executable cmTC_2823c
+/home/heimdall/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.5107.21/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2823c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2823c.dir/CheckSymbolExists.c.o  -o cmTC_2823c 
+CMakeFiles/cmTC_2823c.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_7937a.dir/build.make:86: recipe for target 'cmTC_7937a' failed
-make[1]: *** [cmTC_7937a] Error 1
+CMakeFiles/cmTC_2823c.dir/build.make:86: recipe for target 'cmTC_2823c' failed
+make[1]: *** [cmTC_2823c] Error 1
 make[1]: Leaving directory '/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_7937a/fast' failed
-make: *** [cmTC_7937a/fast] Error 2
+Makefile:121: recipe for target 'cmTC_2823c/fast' failed
+make: *** [cmTC_2823c/fast] Error 2
 
 File /home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
