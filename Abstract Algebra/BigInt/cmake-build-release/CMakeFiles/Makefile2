@@ -68,8 +68,8 @@ CMAKE_BINARY_DIR = "/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-
 # Target rules for target CMakeFiles/BigInt_project_run.dir
 
 # All Build rule for target.
-CMakeFiles/BigInt_project_run.dir/all: src/Algorithms/CMakeFiles/Algorithms.dir/all
 CMakeFiles/BigInt_project_run.dir/all: src/BigInt/CMakeFiles/BigInt.dir/all
+CMakeFiles/BigInt_project_run.dir/all: src/Algorithms/CMakeFiles/Algorithms.dir/all
 	$(MAKE) -f CMakeFiles/BigInt_project_run.dir/build.make CMakeFiles/BigInt_project_run.dir/depend
 	$(MAKE) -f CMakeFiles/BigInt_project_run.dir/build.make CMakeFiles/BigInt_project_run.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/heimdall/Dev/University/Abstract Algebra/BigInt/cmake-build-release/CMakeFiles" --progress-num=7,8,9 "Built target BigInt_project_run"
@@ -315,8 +315,8 @@ Tests/preinstall: Tests/lib/googletest/preinstall
 # Target rules for target Tests/CMakeFiles/runBigIntTests.dir
 
 # All Build rule for target.
-Tests/CMakeFiles/runBigIntTests.dir/all: src/Algorithms/CMakeFiles/Algorithms.dir/all
 Tests/CMakeFiles/runBigIntTests.dir/all: src/BigInt/CMakeFiles/BigInt.dir/all
+Tests/CMakeFiles/runBigIntTests.dir/all: src/Algorithms/CMakeFiles/Algorithms.dir/all
 Tests/CMakeFiles/runBigIntTests.dir/all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 Tests/CMakeFiles/runBigIntTests.dir/all: Tests/lib/googletest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f Tests/CMakeFiles/runBigIntTests.dir/build.make Tests/CMakeFiles/runBigIntTests.dir/depend

@@ -149,15 +149,17 @@ namespace Algo{
         BigInt div = 1, one = 1;
         BigInt x_fixed = 1,  x = 2;
         int cycle = 2, count = 0;
+        std::cerr << "Pollard Rho iteration: ";
         while (gcd(abs(x - x_fixed), num) == BigInt::ONE) {
             if(count == cycle){
                 x_fixed = x;
                 cycle *= 2;
-                std::cout << cycle  << std::endl;
+                std::cerr << cycle  << " ";
             }
             x = normMod(x*x + step, num);
             count++;
         }
+        std::cerr << std::endl;
         return gcd(num, abs(x - x_fixed));
     }
 

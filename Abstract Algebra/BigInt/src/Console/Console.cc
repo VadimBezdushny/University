@@ -37,6 +37,8 @@ void Console::run() {
     std::cout << BOLD(FMAG("[%+ %- %* %/ %^]")) << " module operand_1 operand_2\n";
     std::cout << BOLD(FMAG("sqrt")) << " operand\n";
     std::cout << BOLD(FMAG("chineese")) << " n   a_1 p_1   a_2 p_2   ...   a_n p_n\n";
+    std::cout << BOLD(FMAG("fact")) << " n\n";
+    std::cout << BOLD(FMAG("extgcd")) << " a b\n";
     while(true){
         std::cout << ">";
 
@@ -83,7 +85,7 @@ void Console::run() {
             std::cin >> p;
             BigInt num(p);
             std::cout << Algo::isPrime(num) << std::endl;
-        }else if(keyword == "factorise"){
+        }else if(keyword == "fact"){
             std::string p;
             std::cin >> p;
             BigInt num(p);
@@ -91,7 +93,7 @@ void Console::run() {
             bool not_first = false;
             for(auto it:v){
                 if(not_first)
-                    std::cout << "+";
+                    std::cout << "*";
                 not_first = true;
                 cout << it.first;
                 if(it.second > 1){
@@ -99,6 +101,13 @@ void Console::run() {
                 }
             }
             cout << std::endl;
+        }else if(keyword == "extgcd"){
+            std::string a, b;
+            std::cin >> a >> b;
+            BigInt num1(a), num2(b),x,y;
+            Algo::gcdex(a,b,x,y);
+            auto d = Algo::gcd(a,b);
+            std::cout << x << "*" << a << " + " << y << "*" << b << " = " << d <<std::endl;
         }else if(keyword == "chineese") {
             int n;
             std::cin >> n;

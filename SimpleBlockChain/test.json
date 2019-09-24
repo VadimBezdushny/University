@@ -1,0 +1,55 @@
+{
+    "list_of_blocks": [
+        {
+            "ind": 1,
+            "prev_hash": "0000000000",
+            "timestamp": "2019-06-11 20:59:32.076620",
+            "list_of_transactions": [
+                {
+                    "sender": "Alice",
+                    "receiver": "Bob",
+                    "amount": 13,
+                    "hash": "4ab1fbb3c1158b4c0c0a8bc02f378094e62a72fdca69bd44c946a60e78fc6fee"
+                },
+                {
+                    "sender": "Bob",
+                    "receiver": "Alice",
+                    "amount": 8,
+                    "hash": "f4c6e9e5cc687c7d88ba43341e65956d9a6218dc2529ab0f81d6847c9c92da4a"
+                }
+            ],
+            "finalized": true,
+            "merkle_root": "b31b792259a94b80b8de19e10d99c47eabc3c2037b6af14a617600ee9b264ce8",
+            "nonce": 111,
+            "hash": "000aaa7d88ab2d7c885318d98aef544efbf8a49a8eb54469e1938bf7dbd378a2"
+        },
+        {
+            "ind": 2,
+            "prev_hash": "000aaa7d88ab2d7c885318d98aef544efbf8a49a8eb54469e1938bf7dbd378a2",
+            "timestamp": "2019-06-11 20:59:32.078288",
+            "list_of_transactions": [
+                {
+                    "sender": "Bob",
+                    "receiver": "Eva",
+                    "amount": 2,
+                    "hash": "f3a217c28a9dcba4ea6f996e370f4154bde69c10ec1e6a586c86783ca42971be"
+                },
+                {
+                    "sender": "Alice",
+                    "receiver": "Eva",
+                    "amount": 10,
+                    "hash": "d3231c63c222eec2d32c25fdd18455d5ba1709c62f382c186afb612d89435909"
+                }
+            ],
+            "finalized": true,
+            "merkle_root": "61f883c901a14d890eab92bf543dabb77ee3de477600af7c4a716e13abe24a22",
+            "nonce": 5871,
+            "hash": "0002822db80013a51d7cfc1c921bcb2a9280b349876f85d58b64fff49b8c8b81"
+        }
+    ],
+    "wallet": {
+        "Alice": 35,
+        "Bob": 3,
+        "Eva": 12
+    }
+}
